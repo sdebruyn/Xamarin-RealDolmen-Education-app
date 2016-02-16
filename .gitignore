@@ -237,3 +237,12 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+# Add component libraries
+!*.dll
+Components/**/samples/
+Components/**/component/
+Components/**/docs/
+Components/*.png
+Components/*.info
+Components/**/*.xml

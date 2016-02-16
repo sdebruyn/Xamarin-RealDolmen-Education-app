@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+    android:id="@+id/ActionShowSessions"
+    android:title="@string/Sessions.Label"
+    android:icon="@drawable/ic_view_list_white_48dp"
+    app:showAsAction="ifRoom|withText" />
+  <item
+    android:id="@+id/ActionChangeLanguage"
+    android:title="@string/ChangeLanguage.Label"
+    android:icon="@drawable/ic_language_white_48dp"
+    app:showAsAction="ifRoom|withText" />
+</menu>

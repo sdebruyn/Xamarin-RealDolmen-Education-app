@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/CategoryAppBar"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/CategoryToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+    <com.github.jlmd.animatedcircleloadingview.AnimatedCircleLoadingView
+        android:id="@+id/CategoryCircleLoadingView"
+        android:layout_width="250dp"
+        android:visibility="gone"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        app:mainColor="@color/RDBlue"
+        app:secondaryColor="@color/RDRed" />
+    <ListView
+        android:id="@+id/SubcategoryList"
+        android:layout_below="@id/CategoryAppBar"
+        android:layout_height="wrap_content"
+        android:minHeight="25px"
+        android:layout_width="match_parent" />
+</RelativeLayout>

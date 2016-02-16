@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+    android:id="@+id/ActionLogIn"
+    android:title="@string/Login.Label"
+    android:visible="true"
+    android:icon="@drawable/ic_lock_open_white_48dp"
+    app:showAsAction="ifRoom|withText" />
+  <item
+    android:id="@+id/ActionLogOut"
+    android:title="@string/Logout.Label"
+    android:visible="false"
+    android:icon="@drawable/ic_lock_white_48dp"
+    app:showAsAction="ifRoom|withText" />
+</menu>

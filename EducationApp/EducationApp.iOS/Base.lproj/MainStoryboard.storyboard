@@ -1,0 +1,1387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="68">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--MainViewController-->
+        <scene sceneID="67">
+            <objects>
+                <navigationController title="MainViewController" definesPresentationContext="YES" id="68" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="71">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="125" kind="relationship" relationship="rootViewController" id="140"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="72" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="395"/>
+        </scene>
+        <!--Courses-->
+        <scene sceneID="124">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="125" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="122"/>
+                        <viewControllerLayoutGuide type="bottom" id="123"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="126">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="144">
+                                <rect key="frame" x="0.0" y="271" width="480" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Courses" image="CoursesIcon.png" id="150"/>
+                                    <tabBarItem title="Profile" image="ProfileIcon.png" id="333"/>
+                                </items>
+                            </tabBar>
+                            <searchBar contentMode="redraw" misplaced="YES" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="155">
+                                <rect key="frame" x="0.0" y="64" width="480" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="159">
+                                <rect key="frame" x="0.0" y="108" width="480" height="323"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="173">
+                                    <rect key="frame" x="0.0" y="323" width="480" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </view>
+                            </tableView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="288">
+                                <rect key="frame" x="0.0" y="108" width="480" height="323"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="300">
+                                    <rect key="frame" x="0.0" y="323" width="480" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </view>
+                            </tableView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="An error occured while performing your search. Please check your internet connection and try again later." translatesAutoresizingMaskIntoConstraints="NO" id="307">
+                                <rect key="frame" x="0.0" y="108" width="480" height="67"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="312"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="There are no courses with a title that contains the search value you entered." translatesAutoresizingMaskIntoConstraints="NO" id="318">
+                                <rect key="frame" x="0.0" y="108" width="480" height="67"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="319"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Searching..." translatesAutoresizingMaskIntoConstraints="NO" id="323">
+                                <rect key="frame" x="0.0" y="108" width="480" height="67"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="324"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="144" firstAttribute="bottom" secondItem="126" secondAttribute="bottom" id="147"/>
+                            <constraint firstItem="144" firstAttribute="trailing" secondItem="126" secondAttribute="trailing" id="148"/>
+                            <constraint firstItem="144" firstAttribute="leading" secondItem="126" secondAttribute="leading" id="149"/>
+                            <constraint firstItem="155" firstAttribute="top" secondItem="122" secondAttribute="bottom" id="156"/>
+                            <constraint firstItem="155" firstAttribute="trailing" secondItem="126" secondAttribute="trailing" id="157"/>
+                            <constraint firstItem="155" firstAttribute="leading" secondItem="126" secondAttribute="leading" id="158"/>
+                            <constraint firstItem="159" firstAttribute="top" secondItem="155" secondAttribute="bottom" id="166"/>
+                            <constraint firstItem="159" firstAttribute="leading" secondItem="126" secondAttribute="leading" id="167"/>
+                            <constraint firstItem="159" firstAttribute="trailing" secondItem="126" secondAttribute="trailing" id="168"/>
+                            <constraint firstItem="159" firstAttribute="bottom" secondItem="144" secondAttribute="top" id="169"/>
+                            <constraint firstItem="288" firstAttribute="top" secondItem="159" secondAttribute="top" id="295"/>
+                            <constraint firstItem="144" firstAttribute="top" secondItem="288" secondAttribute="bottom" id="297"/>
+                            <constraint firstItem="288" firstAttribute="leading" secondItem="126" secondAttribute="leading" id="298"/>
+                            <constraint firstAttribute="trailing" secondItem="288" secondAttribute="trailing" id="299"/>
+                            <constraint firstItem="155" firstAttribute="bottom" secondItem="307" secondAttribute="top" id="309"/>
+                            <constraint firstItem="307" firstAttribute="leading" secondItem="126" secondAttribute="leading" id="310"/>
+                            <constraint firstItem="307" firstAttribute="trailing" secondItem="126" secondAttribute="trailing" id="311"/>
+                            <constraint firstItem="318" firstAttribute="top" secondItem="307" secondAttribute="top" id="320"/>
+                            <constraint firstItem="318" firstAttribute="leading" secondItem="126" secondAttribute="leading" id="321"/>
+                            <constraint firstItem="318" firstAttribute="trailing" secondItem="126" secondAttribute="trailing" id="322"/>
+                            <constraint firstItem="323" firstAttribute="leading" secondItem="126" secondAttribute="leading" id="325"/>
+                            <constraint firstItem="323" firstAttribute="top" secondItem="318" secondAttribute="top" id="326"/>
+                            <constraint firstItem="323" firstAttribute="trailing" secondItem="126" secondAttribute="trailing" id="327"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Courses" id="139"/>
+                    <connections>
+                        <outlet property="CategoryTable" destination="159" id="name-outlet-159"/>
+                        <outlet property="CoursesTabBarItem" destination="150" id="name-outlet-150"/>
+                        <outlet property="ProfileTabBarItem" destination="333" id="name-outlet-333"/>
+                        <outlet property="SearchBar" destination="155" id="name-outlet-155"/>
+                        <outlet property="SearchResultsTable" destination="288" id="name-outlet-288"/>
+                        <outlet property="TabBar" destination="144" id="name-outlet-144"/>
+                        <outlet property="TvNoCoursesFound" destination="318" id="name-outlet-318"/>
+                        <outlet property="TvSearchFaulted" destination="307" id="name-outlet-307"/>
+                        <outlet property="TvSearching" destination="323" id="name-outlet-323"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="127" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="646" y="392"/>
+        </scene>
+        <!--Category View Controller-->
+        <scene sceneID="180">
+            <objects>
+                <viewController storyboardIdentifier="CategoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="181" customClass="CategoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="178"/>
+                        <viewControllerLayoutGuide type="bottom" id="179"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="182">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="271">
+                                <rect key="frame" x="0.0" y="64" width="480" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="282">
+                                    <rect key="frame" x="0.0" y="416" width="480" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="271" firstAttribute="top" secondItem="178" secondAttribute="bottom" id="278"/>
+                            <constraint firstItem="271" firstAttribute="trailing" secondItem="182" secondAttribute="trailing" id="279"/>
+                            <constraint firstItem="271" firstAttribute="leading" secondItem="182" secondAttribute="leading" id="280"/>
+                            <constraint firstItem="271" firstAttribute="bottom" secondItem="182" secondAttribute="bottom" id="281"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SubcategoryTable" destination="271" id="name-outlet-271"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="183" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="393"/>
+        </scene>
+        <!--Your profile-->
+        <scene sceneID="336">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" title="Your profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="337" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="334"/>
+                        <viewControllerLayoutGuide type="bottom" id="335"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="338">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="347">
+                                <rect key="frame" x="0.0" y="271" width="480" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Courses" image="CoursesIcon.png" id="353"/>
+                                    <tabBarItem title="Profile" image="ProfileIcon.png" id="354"/>
+                                </items>
+                            </tabBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Please log in to view your profile information." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="361">
+                                <rect key="frame" x="0.0" y="20" width="480" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="365"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="366">
+                                <rect key="frame" x="10" y="30" width="460" height="391"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="First name:" translatesAutoresizingMaskIntoConstraints="NO" id="375">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="383"/>
+                                            <constraint firstAttribute="width" constant="100" id="384"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="376">
+                                        <rect key="frame" x="100" y="0.0" width="360" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Email:" translatesAutoresizingMaskIntoConstraints="NO" id="379">
+                                        <rect key="frame" x="0.0" y="60" width="100" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Last name:" translatesAutoresizingMaskIntoConstraints="NO" id="380">
+                                        <rect key="frame" x="0.0" y="30" width="100" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="397">
+                                        <rect key="frame" x="100" y="30" width="360" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="402">
+                                        <rect key="frame" x="100" y="60" width="360" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="375" firstAttribute="leading" secondItem="366" secondAttribute="leading" id="381"/>
+                                    <constraint firstItem="375" firstAttribute="top" secondItem="366" secondAttribute="top" id="382"/>
+                                    <constraint firstItem="376" firstAttribute="leading" secondItem="375" secondAttribute="trailing" id="385"/>
+                                    <constraint firstItem="376" firstAttribute="top" secondItem="366" secondAttribute="top" id="386"/>
+                                    <constraint firstAttribute="trailing" secondItem="376" secondAttribute="trailing" id="387"/>
+                                    <constraint firstItem="376" firstAttribute="height" secondItem="375" secondAttribute="height" id="388"/>
+                                    <constraint firstItem="380" firstAttribute="top" secondItem="375" secondAttribute="bottom" id="389"/>
+                                    <constraint firstItem="380" firstAttribute="height" secondItem="375" secondAttribute="height" id="390"/>
+                                    <constraint firstItem="380" firstAttribute="width" secondItem="375" secondAttribute="width" id="391"/>
+                                    <constraint firstItem="380" firstAttribute="leading" secondItem="366" secondAttribute="leading" id="392"/>
+                                    <constraint firstItem="379" firstAttribute="top" secondItem="380" secondAttribute="bottom" id="393"/>
+                                    <constraint firstItem="379" firstAttribute="leading" secondItem="366" secondAttribute="leading" id="394"/>
+                                    <constraint firstItem="379" firstAttribute="width" secondItem="380" secondAttribute="width" id="395"/>
+                                    <constraint firstItem="379" firstAttribute="height" secondItem="380" secondAttribute="height" id="396"/>
+                                    <constraint firstItem="397" firstAttribute="height" secondItem="376" secondAttribute="height" id="398"/>
+                                    <constraint firstItem="397" firstAttribute="width" secondItem="376" secondAttribute="width" id="399"/>
+                                    <constraint firstItem="380" firstAttribute="trailing" secondItem="397" secondAttribute="leading" id="400"/>
+                                    <constraint firstItem="397" firstAttribute="top" secondItem="376" secondAttribute="bottom" id="401"/>
+                                    <constraint firstItem="402" firstAttribute="height" secondItem="376" secondAttribute="height" id="403"/>
+                                    <constraint firstItem="402" firstAttribute="width" secondItem="376" secondAttribute="width" id="405"/>
+                                    <constraint firstItem="402" firstAttribute="top" secondItem="397" secondAttribute="bottom" id="406"/>
+                                    <constraint firstItem="402" firstAttribute="leading" secondItem="379" secondAttribute="trailing" id="407"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="347" firstAttribute="bottom" secondItem="338" secondAttribute="bottom" id="350"/>
+                            <constraint firstItem="347" firstAttribute="trailing" secondItem="338" secondAttribute="trailing" id="351"/>
+                            <constraint firstItem="347" firstAttribute="leading" secondItem="338" secondAttribute="leading" id="352"/>
+                            <constraint firstItem="361" firstAttribute="top" secondItem="334" secondAttribute="bottom" id="362"/>
+                            <constraint firstItem="361" firstAttribute="trailing" secondItem="338" secondAttribute="trailing" id="363"/>
+                            <constraint firstItem="361" firstAttribute="leading" secondItem="338" secondAttribute="leading" id="364"/>
+                            <constraint firstItem="366" firstAttribute="top" secondItem="361" secondAttribute="top" constant="10" id="371"/>
+                            <constraint firstAttribute="trailing" secondItem="366" secondAttribute="trailing" constant="10" id="372"/>
+                            <constraint firstItem="347" firstAttribute="top" secondItem="366" secondAttribute="bottom" constant="10" id="373"/>
+                            <constraint firstItem="366" firstAttribute="leading" secondItem="338" secondAttribute="leading" constant="10" id="374"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CoursesTabBarItem" destination="353" id="name-outlet-353"/>
+                        <outlet property="PleaseLogin" destination="361" id="name-outlet-361"/>
+                        <outlet property="ProfileData" destination="366" id="name-outlet-366"/>
+                        <outlet property="ProfileTabBarItem" destination="354" id="name-outlet-354"/>
+                        <outlet property="TabBar" destination="347" id="name-outlet-347"/>
+                        <outlet property="TvEmail" destination="402" id="name-outlet-402"/>
+                        <outlet property="TvFirstName" destination="376" id="name-outlet-376"/>
+                        <outlet property="TvLastName" destination="397" id="name-outlet-397"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="339" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="985"/>
+        </scene>
+        <!--Subcategory View Controller-->
+        <scene sceneID="416">
+            <objects>
+                <viewController storyboardIdentifier="SubcategoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="417" customClass="SubcategoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="414"/>
+                        <viewControllerLayoutGuide type="bottom" id="415"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="418">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="438">
+                                <rect key="frame" x="0.0" y="64" width="480" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="449">
+                                    <rect key="frame" x="0.0" y="416" width="480" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="438" firstAttribute="top" secondItem="414" secondAttribute="bottom" id="445"/>
+                            <constraint firstItem="438" firstAttribute="trailing" secondItem="418" secondAttribute="trailing" id="446"/>
+                            <constraint firstItem="438" firstAttribute="bottom" secondItem="415" secondAttribute="top" id="447"/>
+                            <constraint firstItem="438" firstAttribute="leading" secondItem="418" secondAttribute="leading" id="448"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CoursesTable" destination="438" id="name-outlet-438"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="419" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536" y="390"/>
+        </scene>
+        <!--Course Tab View Controller-->
+        <scene sceneID="461">
+            <objects>
+                <tabBarController storyboardIdentifier="CourseTabViewController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="462" customClass="CourseTabViewController" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="467">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1023" kind="relationship" relationship="viewControllers" id="1045"/>
+                        <segue destination="1669" kind="relationship" relationship="viewControllers" id="1696"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="468" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1545" y="988"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="1022">
+            <objects>
+                <pageViewController storyboardIdentifier="CourseViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="1023" customClass="CourseViewController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="StudentIcon.png" id="1044"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1024" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044" y="388"/>
+        </scene>
+        <!--Information View Controller-->
+        <scene sceneID="1049">
+            <objects>
+                <viewController storyboardIdentifier="InformationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1050" customClass="InformationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1047"/>
+                        <viewControllerLayoutGuide type="bottom" id="1048"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1051">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1107">
+                                <rect key="frame" x="0.0" y="20" width="736" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Start date:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1141">
+                                <rect key="frame" x="0.0" y="86" width="82" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1144">
+                                <rect key="frame" x="82" y="86" width="86" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Publisher:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1151">
+                                <rect key="frame" x="0.0" y="119" width="82" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1152">
+                                <rect key="frame" x="82" y="119" width="238" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Price (€):" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1163">
+                                <rect key="frame" x="0.0" y="152" width="82" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1164">
+                                <rect key="frame" x="82" y="152" width="86" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Duration:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1173">
+                                <rect key="frame" x="0.0" y="185" width="82" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1174">
+                                <rect key="frame" x="82" y="185" width="30" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="1183"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="day(s)" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1175">
+                                <rect key="frame" x="112" y="185" width="86" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1198">
+                                <rect key="frame" x="0.0" y="52" width="736" height="78"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="30" maxX="5" maxY="30"/>
+                                <state key="normal" title="Tap for more/less info.">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1107" secondAttribute="trailing" id="1114"/>
+                            <constraint firstItem="1107" firstAttribute="leading" secondItem="1051" secondAttribute="leading" id="1116"/>
+                            <constraint firstItem="1107" firstAttribute="top" secondItem="1047" secondAttribute="bottom" id="1126"/>
+                            <constraint firstItem="1141" firstAttribute="leading" secondItem="1051" secondAttribute="leading" id="1143"/>
+                            <constraint firstItem="1144" firstAttribute="leading" secondItem="1141" secondAttribute="trailing" id="1147"/>
+                            <constraint firstItem="1144" firstAttribute="bottom" secondItem="1141" secondAttribute="bottom" id="1148"/>
+                            <constraint firstItem="1144" firstAttribute="top" secondItem="1141" secondAttribute="top" id="1149"/>
+                            <constraint firstItem="1144" firstAttribute="height" secondItem="1141" secondAttribute="height" id="1150"/>
+                            <constraint firstItem="1151" firstAttribute="top" secondItem="1141" secondAttribute="bottom" id="1153"/>
+                            <constraint firstItem="1151" firstAttribute="leading" secondItem="1051" secondAttribute="leading" id="1154"/>
+                            <constraint firstItem="1152" firstAttribute="leading" secondItem="1151" secondAttribute="trailing" id="1155"/>
+                            <constraint firstItem="1152" firstAttribute="trailing" secondItem="1051" secondAttribute="trailing" id="1156"/>
+                            <constraint firstItem="1151" firstAttribute="top" secondItem="1152" secondAttribute="top" id="1157"/>
+                            <constraint firstItem="1151" firstAttribute="bottom" secondItem="1152" secondAttribute="bottom" id="1158"/>
+                            <constraint firstItem="1144" firstAttribute="height" secondItem="1141" secondAttribute="height" id="1159"/>
+                            <constraint firstItem="1151" firstAttribute="height" secondItem="1141" secondAttribute="height" id="1160"/>
+                            <constraint firstItem="1152" firstAttribute="height" secondItem="1141" secondAttribute="height" id="1161"/>
+                            <constraint firstItem="1141" firstAttribute="width" secondItem="1151" secondAttribute="width" id="1162"/>
+                            <constraint firstItem="1164" firstAttribute="width" secondItem="1144" secondAttribute="width" id="1165"/>
+                            <constraint firstItem="1163" firstAttribute="width" secondItem="1141" secondAttribute="width" id="1166"/>
+                            <constraint firstItem="1163" firstAttribute="height" secondItem="1151" secondAttribute="height" id="1167"/>
+                            <constraint firstItem="1164" firstAttribute="height" secondItem="1152" secondAttribute="height" id="1168"/>
+                            <constraint firstItem="1163" firstAttribute="leading" secondItem="1051" secondAttribute="leading" id="1169"/>
+                            <constraint firstItem="1163" firstAttribute="top" secondItem="1151" secondAttribute="bottom" id="1170"/>
+                            <constraint firstItem="1164" firstAttribute="leading" secondItem="1163" secondAttribute="trailing" id="1171"/>
+                            <constraint firstItem="1164" firstAttribute="top" secondItem="1163" secondAttribute="top" id="1172"/>
+                            <constraint firstItem="1173" firstAttribute="leading" secondItem="1051" secondAttribute="leading" id="1176"/>
+                            <constraint firstItem="1173" firstAttribute="width" secondItem="1163" secondAttribute="width" id="1177"/>
+                            <constraint firstItem="1173" firstAttribute="height" secondItem="1163" secondAttribute="height" id="1178"/>
+                            <constraint firstItem="1173" firstAttribute="top" secondItem="1163" secondAttribute="bottom" id="1179"/>
+                            <constraint firstItem="1174" firstAttribute="leading" secondItem="1173" secondAttribute="trailing" id="1180"/>
+                            <constraint firstItem="1174" firstAttribute="top" secondItem="1164" secondAttribute="bottom" id="1181"/>
+                            <constraint firstItem="1174" firstAttribute="height" secondItem="1164" secondAttribute="height" id="1182"/>
+                            <constraint firstItem="1175" firstAttribute="width" secondItem="1164" secondAttribute="width" id="1184"/>
+                            <constraint firstItem="1175" firstAttribute="height" secondItem="1164" secondAttribute="height" id="1185"/>
+                            <constraint firstItem="1175" firstAttribute="leading" secondItem="1174" secondAttribute="trailing" id="1186"/>
+                            <constraint firstItem="1175" firstAttribute="top" secondItem="1164" secondAttribute="bottom" id="1187"/>
+                            <constraint firstItem="1198" firstAttribute="leading" secondItem="1051" secondAttribute="leading" id="1199"/>
+                            <constraint firstAttribute="trailing" secondItem="1198" secondAttribute="trailing" id="1200"/>
+                            <constraint firstItem="1198" firstAttribute="top" secondItem="1107" secondAttribute="centerY" constant="15" id="1201"/>
+                            <constraint firstItem="1141" firstAttribute="top" secondItem="1198" secondAttribute="bottom" constant="15" id="1202"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BtTapDescription" destination="1198" id="name-outlet-1198"/>
+                        <outlet property="TvDescription" destination="1107" id="name-outlet-1107"/>
+                        <outlet property="TvDuration" destination="1174" id="name-outlet-1174"/>
+                        <outlet property="TvDurationDesc1" destination="1173" id="name-outlet-1173"/>
+                        <outlet property="TvDurationDesc2" destination="1175" id="name-outlet-1175"/>
+                        <outlet property="TvPrice" destination="1164" id="name-outlet-1164"/>
+                        <outlet property="TvPriceDesc" destination="1163" id="name-outlet-1163"/>
+                        <outlet property="TvPublisher" destination="1152" id="name-outlet-1152"/>
+                        <outlet property="TvPublisherDesc" destination="1151" id="name-outlet-1151"/>
+                        <outlet property="TvStartDate" destination="1144" id="name-outlet-1144"/>
+                        <outlet property="TvStartDateDesc" destination="1141" id="name-outlet-1141"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1052" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2518" y="400"/>
+        </scene>
+        <!--Description View Controller-->
+        <scene sceneID="1215">
+            <objects>
+                <viewController storyboardIdentifier="DescriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1216" customClass="DescriptionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1213"/>
+                        <viewControllerLayoutGuide type="bottom" id="1214"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1217">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1333">
+                                <rect key="frame" x="0.0" y="20" width="736" height="716"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Content:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1230">
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1234">
+                                        <rect key="frame" x="0.0" y="33" width="118" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Target audience:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1238">
+                                        <rect key="frame" x="0.0" y="81" width="123" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1242">
+                                        <rect key="frame" x="0.0" y="114" width="128" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Objectives:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1257">
+                                        <rect key="frame" x="0.0" y="162" width="87" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1261">
+                                        <rect key="frame" x="0.0" y="195" width="135" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1307">
+                                        <rect key="frame" x="0.0" y="438" width="128" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Materials:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1303">
+                                        <rect key="frame" x="0.0" y="405" width="77" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1288">
+                                        <rect key="frame" x="0.0" y="357" width="126" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Methods:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1284">
+                                        <rect key="frame" x="0.0" y="324" width="74" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1280">
+                                        <rect key="frame" x="0.0" y="276" width="153" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Prerequisites:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1276">
+                                        <rect key="frame" x="0.0" y="243" width="104" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Platforms:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1480">
+                                        <rect key="frame" x="0.0" y="486" width="80" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1485">
+                                        <rect key="frame" x="0.0" y="519" width="130" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1495">
+                                        <rect key="frame" x="0.0" y="567" width="320" height="38"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                                        <state key="normal" title="View more info online">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1230" secondAttribute="trailing" id="1349"/>
+                                    <constraint firstItem="1230" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1350"/>
+                                    <constraint firstAttribute="top" secondItem="1230" secondAttribute="top" id="1351"/>
+                                    <constraint firstItem="1234" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1385"/>
+                                    <constraint firstItem="1234" firstAttribute="trailing" secondItem="1333" secondAttribute="trailing" id="1386"/>
+                                    <constraint firstItem="1234" firstAttribute="top" secondItem="1230" secondAttribute="bottom" id="1387"/>
+                                    <constraint firstItem="1238" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1388"/>
+                                    <constraint firstItem="1238" firstAttribute="top" secondItem="1234" secondAttribute="bottom" constant="15" id="1389"/>
+                                    <constraint firstItem="1242" firstAttribute="top" secondItem="1238" secondAttribute="bottom" id="1401"/>
+                                    <constraint firstItem="1242" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1402"/>
+                                    <constraint firstItem="1257" firstAttribute="top" secondItem="1242" secondAttribute="bottom" constant="15" id="1432"/>
+                                    <constraint firstItem="1257" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1433"/>
+                                    <constraint firstItem="1261" firstAttribute="top" secondItem="1257" secondAttribute="bottom" id="1437"/>
+                                    <constraint firstItem="1261" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1440"/>
+                                    <constraint firstItem="1276" firstAttribute="top" secondItem="1261" secondAttribute="bottom" constant="15" id="1441"/>
+                                    <constraint firstItem="1276" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1442"/>
+                                    <constraint firstItem="1280" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1443"/>
+                                    <constraint firstItem="1276" firstAttribute="bottom" secondItem="1280" secondAttribute="top" id="1444"/>
+                                    <constraint firstItem="1284" firstAttribute="top" secondItem="1280" secondAttribute="bottom" constant="15" id="1445"/>
+                                    <constraint firstItem="1284" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1446"/>
+                                    <constraint firstItem="1284" firstAttribute="bottom" secondItem="1288" secondAttribute="top" id="1447"/>
+                                    <constraint firstItem="1288" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1448"/>
+                                    <constraint firstItem="1303" firstAttribute="top" secondItem="1288" secondAttribute="bottom" constant="15" id="1449"/>
+                                    <constraint firstItem="1303" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1450"/>
+                                    <constraint firstItem="1307" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1451"/>
+                                    <constraint firstItem="1303" firstAttribute="bottom" secondItem="1307" secondAttribute="top" id="1452"/>
+                                    <constraint firstAttribute="leading" secondItem="1480" secondAttribute="leading" id="1483"/>
+                                    <constraint firstItem="1480" firstAttribute="top" secondItem="1307" secondAttribute="bottom" constant="15" id="1484"/>
+                                    <constraint firstItem="1485" firstAttribute="top" secondItem="1480" secondAttribute="bottom" id="1486"/>
+                                    <constraint firstItem="1485" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1487"/>
+                                    <constraint firstItem="1495" firstAttribute="top" secondItem="1485" secondAttribute="bottom" constant="15" id="1496"/>
+                                    <constraint firstItem="1495" firstAttribute="leading" secondItem="1333" secondAttribute="leading" id="1497"/>
+                                    <constraint firstAttribute="trailing" secondItem="1495" secondAttribute="trailing" id="1498"/>
+                                    <constraint firstAttribute="centerX" secondItem="1495" secondAttribute="centerX" id="1503"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1213" firstAttribute="bottom" secondItem="1333" secondAttribute="top" id="1334"/>
+                            <constraint firstItem="1333" firstAttribute="bottom" secondItem="1214" secondAttribute="top" id="1335"/>
+                            <constraint firstItem="1333" firstAttribute="trailing" secondItem="1217" secondAttribute="trailing" id="1336"/>
+                            <constraint firstItem="1333" firstAttribute="leading" secondItem="1217" secondAttribute="leading" id="1337"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BtOpenBrowser" destination="1495" id="name-outlet-1495"/>
+                        <outlet property="ScrollView" destination="1333" id="name-outlet-1333"/>
+                        <outlet property="TvAudience" destination="1242" id="name-outlet-1242"/>
+                        <outlet property="TvAudienceDesc" destination="1238" id="name-outlet-1238"/>
+                        <outlet property="TvCourseContent" destination="1234" id="name-outlet-1234"/>
+                        <outlet property="TvCourseContentDesc" destination="1230" id="name-outlet-1230"/>
+                        <outlet property="TvMaterials" destination="1307" id="name-outlet-1307"/>
+                        <outlet property="TvMaterialsDesc" destination="1303" id="name-outlet-1303"/>
+                        <outlet property="TvMethods" destination="1288" id="name-outlet-1288"/>
+                        <outlet property="TvMethodsDesc" destination="1284" id="name-outlet-1284"/>
+                        <outlet property="TvObjectives" destination="1261" id="name-outlet-1261"/>
+                        <outlet property="TvObjectivesDesc" destination="1257" id="name-outlet-1257"/>
+                        <outlet property="TvPlatforms" destination="1485" id="name-outlet-1485"/>
+                        <outlet property="TvPlatformsDesc" destination="1480" id="name-outlet-1480"/>
+                        <outlet property="TvPrerequisites" destination="1280" id="name-outlet-1280"/>
+                        <outlet property="TvPrerequisitesDesc" destination="1276" id="name-outlet-1276"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1218" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2902" y="400"/>
+        </scene>
+        <!--Instructor View Controller-->
+        <scene sceneID="1517">
+            <objects>
+                <viewController storyboardIdentifier="InstructorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1518" customClass="InstructorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1515"/>
+                        <viewControllerLayoutGuide type="bottom" id="1516"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1519">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Instructor:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1526">
+                                <rect key="frame" x="0.0" y="20" width="82" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1529">
+                                <rect key="frame" x="82" y="20" width="76" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1546">
+                                <rect key="frame" x="158" y="20" width="75" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Employer:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1549">
+                                <rect key="frame" x="0.0" y="53" width="78" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1555">
+                                <rect key="frame" x="78" y="53" width="70" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1558">
+                                <rect key="frame" x="165" y="53" width="147" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="-" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1561">
+                                <rect key="frame" x="148" y="53" width="17" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1565" misplaced="YES">
+                                <rect key="frame" x="253" y="192" width="222" height="30"/>
+                                <state key="normal" title="Mail instructor about this course">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1526" firstAttribute="leading" secondItem="1519" secondAttribute="leading" id="1527"/>
+                            <constraint firstItem="1526" firstAttribute="top" secondItem="1515" secondAttribute="bottom" id="1528"/>
+                            <constraint firstItem="1529" firstAttribute="leading" secondItem="1526" secondAttribute="trailing" id="1542"/>
+                            <constraint firstItem="1529" firstAttribute="top" secondItem="1515" secondAttribute="bottom" id="1543"/>
+                            <constraint firstItem="1546" firstAttribute="leading" secondItem="1529" secondAttribute="trailing" id="1547"/>
+                            <constraint firstItem="1546" firstAttribute="top" secondItem="1515" secondAttribute="bottom" id="1548"/>
+                            <constraint firstItem="1549" firstAttribute="leading" secondItem="1519" secondAttribute="leading" id="1552"/>
+                            <constraint firstItem="1526" firstAttribute="bottom" secondItem="1549" secondAttribute="top" id="1554"/>
+                            <constraint firstItem="1555" firstAttribute="leading" secondItem="1549" secondAttribute="trailing" id="1556"/>
+                            <constraint firstItem="1555" firstAttribute="top" secondItem="1529" secondAttribute="bottom" id="1557"/>
+                            <constraint firstItem="1558" firstAttribute="top" secondItem="1546" secondAttribute="bottom" id="1560"/>
+                            <constraint firstItem="1555" firstAttribute="trailing" secondItem="1561" secondAttribute="leading" id="1562"/>
+                            <constraint firstItem="1561" firstAttribute="top" secondItem="1546" secondAttribute="bottom" id="1563"/>
+                            <constraint firstItem="1561" firstAttribute="trailing" secondItem="1558" secondAttribute="leading" id="1564"/>
+                            <constraint firstAttribute="centerX" secondItem="1565" secondAttribute="centerX" constant="4" id="1566"/>
+                            <constraint firstItem="1565" firstAttribute="centerY" secondItem="1519" secondAttribute="centerY" id="1567"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BtSendInstructorEmail" destination="1565" id="name-outlet-1565"/>
+                        <outlet property="TvEmployer" destination="1555" id="name-outlet-1555"/>
+                        <outlet property="TvEmployerDepartment" destination="1558" id="name-outlet-1558"/>
+                        <outlet property="TvEmployerDesc" destination="1549" id="name-outlet-1549"/>
+                        <outlet property="TvFirstName" destination="1529" id="name-outlet-1529"/>
+                        <outlet property="TvInstructorNameDesc" destination="1526" id="name-outlet-1526"/>
+                        <outlet property="TvLastName" destination="1546" id="name-outlet-1546"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1520" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3359" y="403"/>
+        </scene>
+        <!--Sessions-->
+        <scene sceneID="1668">
+            <objects>
+                <viewController storyboardIdentifier="SessionsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1669" customClass="SessionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1666"/>
+                        <viewControllerLayoutGuide type="bottom" id="1667"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1670">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1698">
+                                <rect key="frame" x="0.0" y="20" width="736" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="1711">
+                                    <rect key="frame" x="0.0" y="667" width="736" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1698" firstAttribute="top" secondItem="1666" secondAttribute="bottom" id="1705"/>
+                            <constraint firstItem="1698" firstAttribute="trailing" secondItem="1670" secondAttribute="trailing" id="1706"/>
+                            <constraint firstItem="1698" firstAttribute="leading" secondItem="1670" secondAttribute="leading" id="1707"/>
+                            <constraint firstItem="1698" firstAttribute="bottom" secondItem="1667" secondAttribute="top" id="1708"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sessions" image="SessionsIcon.png" id="1695"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="SessionsTable" destination="1698" id="name-outlet-1698"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1671" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2096" y="994"/>
+        </scene>
+        <!--Session View Controller-->
+        <scene sceneID="1714">
+            <objects>
+                <viewController storyboardIdentifier="SessionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1715" customClass="SessionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1712"/>
+                        <viewControllerLayoutGuide type="bottom" id="1713"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1716">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1732" misplaced="YES">
+                                <rect key="frame" x="0.0" y="365" width="736" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Schedule" image="ScheduleIcon.png" id="1738"/>
+                                    <tabBarItem title="Subscribe" image="SubscribeIcon.png" id="1817"/>
+                                    <tabBarItem title="Feedback" image="FeedbackIcon.png" id="1835"/>
+                                    <tabBarItem title="Questions" image="ContactIcon.png" id="1836"/>
+                                </items>
+                            </tabBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1739">
+                                <rect key="frame" x="0.0" y="20" width="736" height="38"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0039215686274509803" green="0.53725490196078429" blue="0.70588235294117652" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Preparation:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1743">
+                                <rect key="frame" x="0.0" y="58" width="94" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1746">
+                                <rect key="frame" x="94" y="58" width="97" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1751">
+                                <rect key="frame" x="0.0" y="91" width="736" height="596"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="1799">
+                                    <rect key="frame" x="0.0" y="596" width="736" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1732" firstAttribute="trailing" secondItem="1716" secondAttribute="trailing" id="1735"/>
+                            <constraint firstItem="1732" firstAttribute="leading" secondItem="1716" secondAttribute="leading" id="1736"/>
+                            <constraint firstItem="1732" firstAttribute="bottom" secondItem="1716" secondAttribute="bottom" id="1737"/>
+                            <constraint firstItem="1739" firstAttribute="leading" secondItem="1716" secondAttribute="leading" id="1740"/>
+                            <constraint firstItem="1739" firstAttribute="top" secondItem="1712" secondAttribute="bottom" id="1741"/>
+                            <constraint firstAttribute="trailing" secondItem="1739" secondAttribute="trailing" id="1742"/>
+                            <constraint firstItem="1743" firstAttribute="leading" secondItem="1716" secondAttribute="leading" id="1744"/>
+                            <constraint firstItem="1739" firstAttribute="bottom" secondItem="1743" secondAttribute="top" id="1745"/>
+                            <constraint firstItem="1746" firstAttribute="top" secondItem="1739" secondAttribute="bottom" id="1747"/>
+                            <constraint firstItem="1746" firstAttribute="leading" secondItem="1743" secondAttribute="trailing" id="1748"/>
+                            <constraint firstItem="1751" firstAttribute="top" secondItem="1746" secondAttribute="bottom" id="1758"/>
+                            <constraint firstItem="1732" firstAttribute="top" secondItem="1751" secondAttribute="bottom" id="1759"/>
+                            <constraint firstItem="1751" firstAttribute="trailing" secondItem="1716" secondAttribute="trailing" id="1760"/>
+                            <constraint firstItem="1751" firstAttribute="leading" secondItem="1716" secondAttribute="leading" id="1761"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ContactTabBarItem" destination="1836" id="name-outlet-1836"/>
+                        <outlet property="FeedbackTabBarItem" destination="1835" id="name-outlet-1835"/>
+                        <outlet property="ScheduleTabBarItem" destination="1738" id="name-outlet-1738"/>
+                        <outlet property="SessionScheduleTable" destination="1751" id="name-outlet-1751"/>
+                        <outlet property="SubscribeTabBarItem" destination="1817" id="name-outlet-1817"/>
+                        <outlet property="TabBar" destination="1732" id="name-outlet-1732"/>
+                        <outlet property="TvLocation" destination="1739" id="name-outlet-1739"/>
+                        <outlet property="TvPreparation" destination="1746" id="name-outlet-1746"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1717" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2525" y="984"/>
+        </scene>
+        <!--Subscribe View Controller-->
+        <scene sceneID="1764">
+            <objects>
+                <viewController storyboardIdentifier="SubscribeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1765" customClass="SubscribeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1762"/>
+                        <viewControllerLayoutGuide type="bottom" id="1763"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1766">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="2129" translatesAutoresizingMaskIntoConstraints="NO" text="Please login before using this function." editable="NO" selectable="NO" scrollEnabled="NO">
+                                <rect key="frame" x="0.0" y="20" width="275.5" height="34"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1837">
+                                <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="1854"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Schedule" image="ScheduleIcon.png" id="1838"/>
+                                    <tabBarItem title="Subscribe" image="SubscribeIcon.png" id="1839"/>
+                                    <tabBarItem title="Feedback" image="FeedbackIcon.png" id="1840"/>
+                                    <tabBarItem title="Questions" image="ContactIcon.png" id="1841"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2168" translatesAutoresizingMaskIntoConstraints="NO" separatorStyle="none" allowsSelection="NO">
+                                <rect key="frame" x="0.0" y="20" width="320" height="295"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2196" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="371" width="320" height="30"/>
+                                <state key="normal" title="Add participant">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2197" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="401" width="320" height="30"/>
+                                <state key="normal" title="Subscribe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1837" secondAttribute="trailing" id="1852"/>
+                            <constraint firstAttribute="bottom" secondItem="1837" secondAttribute="bottom" id="1853"/>
+                            <constraint id="2130" firstItem="2129" firstAttribute="top" secondItem="1762" secondAttribute="bottom"/>
+                            <constraint id="2131" firstItem="2129" firstAttribute="leading" secondItem="1766" secondAttribute="leading"/>
+                            <constraint id="2175" firstItem="2168" firstAttribute="top" secondItem="1762" secondAttribute="bottom"/>
+                            <constraint id="2176" firstItem="2168" firstAttribute="trailing" secondItem="1766" secondAttribute="trailing"/>
+                            <constraint id="2177" firstItem="2168" firstAttribute="leading" secondItem="1766" secondAttribute="leading"/>
+                            <constraint id="2198" firstItem="1837" firstAttribute="top" secondItem="2197" secondAttribute="bottom"/>
+                            <constraint id="2199" firstItem="2197" firstAttribute="trailing" secondItem="1766" secondAttribute="trailing"/>
+                            <constraint id="2200" firstItem="2197" firstAttribute="leading" secondItem="1766" secondAttribute="leading"/>
+                            <constraint id="2201" firstItem="2196" firstAttribute="leading" secondItem="1766" secondAttribute="leading"/>
+                            <constraint id="2202" firstItem="2196" firstAttribute="trailing" secondItem="1766" secondAttribute="trailing"/>
+                            <constraint id="2203" firstItem="2197" firstAttribute="top" secondItem="2196" secondAttribute="bottom"/>
+                            <constraint id="2204" firstItem="2196" firstAttribute="top" secondItem="2168" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ContactTabBarItem" destination="1841" id="name-outlet-1841"/>
+                        <outlet property="FeedbackTabBarItem" destination="1840" id="name-outlet-1840"/>
+                        <outlet property="ScheduleTabBarItem" destination="1838" id="name-outlet-1838"/>
+                        <outlet property="SubscribeTabBarItem" destination="1839" id="name-outlet-1839"/>
+                        <outlet property="TabBar" destination="1837" id="name-outlet-1837"/>
+                        <outlet property="TvPleaseLogin" destination="2129" id="name-outlet-2129"/>
+                        <outlet property="DataTable" destination="2168" id="name-outlet-2168"/>
+                        <outlet property="SendSubscriptionButton" destination="2197" id="name-outlet-2197"/>
+                        <outlet property="AddParticipantButton" destination="2196" id="name-outlet-2196"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1767" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2910" y="989"/>
+        </scene>
+        <!--Feedback View Controller-->
+        <scene sceneID="1771">
+            <objects>
+                <viewController storyboardIdentifier="FeedbackViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1772" customClass="FeedbackViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1769"/>
+                        <viewControllerLayoutGuide type="bottom" id="1770"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1773">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1921" misplaced="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="853"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Goal attained:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2087">
+                                        <rect key="frame" x="0.0" y="693" width="104.5" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Global:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2088">
+                                        <rect key="frame" x="0.0" y="756" width="57.5" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Well structured:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2080">
+                                        <rect key="frame" x="0.0" y="630" width="118" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Organization:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2049">
+                                        <rect key="frame" x="0.0" y="504" width="101" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Instructor presentation:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2040">
+                                        <rect key="frame" x="0.0" y="441" width="170.5" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Well paced:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2056">
+                                        <rect key="frame" x="0.0" y="567" width="88.5" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Instructor knowledge:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2008">
+                                        <rect key="frame" x="0.0" y="378" width="158.5" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Instructor interaction:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1996">
+                                        <rect key="frame" x="0.0" y="315" width="158" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="In depth:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1987">
+                                        <rect key="frame" x="0.0" y="252" width="70.5" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Class room:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1916">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Content:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1962">
+                                        <rect key="frame" x="0.0" y="63" width="69" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Concepts and practice:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1965">
+                                        <rect key="frame" x="0.0" y="126" width="166.5" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Materials:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1968">
+                                        <rect key="frame" x="0.0" y="189" width="77" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="1981" misplaced="YES">
+                                        <rect key="frame" x="55" y="222" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="1982"/>
+                                        </constraints>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="1950" misplaced="YES">
+                                        <rect key="frame" x="55" y="33" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="1960"/>
+                                        </constraints>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="1966" misplaced="YES">
+                                        <rect key="frame" x="55" y="96" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="1967"/>
+                                        </constraints>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="1969" misplaced="YES">
+                                        <rect key="frame" x="55" y="159" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="1970"/>
+                                        </constraints>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="1992" misplaced="YES">
+                                        <rect key="frame" x="55" y="285" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="1993"/>
+                                        </constraints>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="1999" misplaced="YES">
+                                        <rect key="frame" x="55" y="348" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="2000"/>
+                                        </constraints>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="2011" misplaced="YES">
+                                        <rect key="frame" x="55" y="411" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="2012"/>
+                                        </constraints>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="2041" misplaced="YES">
+                                        <rect key="frame" x="55" y="474" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="2042"/>
+                                        </constraints>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="2050" misplaced="YES">
+                                        <rect key="frame" x="55" y="537" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="2051"/>
+                                        </constraints>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="2057" misplaced="YES">
+                                        <rect key="frame" x="55" y="600" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="2058"/>
+                                        </constraints>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="2083" misplaced="YES">
+                                        <rect key="frame" x="55" y="663" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="2084"/>
+                                        </constraints>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="2089" misplaced="YES">
+                                        <rect key="frame" x="55" y="789" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="2090"/>
+                                        </constraints>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="2091" misplaced="YES">
+                                        <rect key="frame" x="55" y="726" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="2092"/>
+                                        </constraints>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" id="2104" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                        <rect key="frame" x="155.5" y="819" width="103" height="30"/>
+                                        <state key="normal" title="Send feedback">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1916" firstAttribute="top" secondItem="1921" secondAttribute="top" id="1931"/>
+                                    <constraint firstItem="1916" firstAttribute="leading" secondItem="1921" secondAttribute="leading" id="1932"/>
+                                    <constraint firstItem="1950" firstAttribute="top" secondItem="1916" secondAttribute="bottom" id="1958"/>
+                                    <constraint firstAttribute="centerX" secondItem="1950" secondAttribute="centerX" id="1959"/>
+                                    <constraint firstItem="1962" firstAttribute="top" secondItem="1950" secondAttribute="bottom" id="1971"/>
+                                    <constraint firstItem="1962" firstAttribute="leading" secondItem="1921" secondAttribute="leading" id="1972"/>
+                                    <constraint firstAttribute="centerX" secondItem="1966" secondAttribute="centerX" id="1973"/>
+                                    <constraint firstItem="1966" firstAttribute="top" secondItem="1962" secondAttribute="bottom" id="1974"/>
+                                    <constraint firstItem="1965" firstAttribute="top" secondItem="1966" secondAttribute="bottom" id="1975"/>
+                                    <constraint firstItem="1965" firstAttribute="leading" secondItem="1921" secondAttribute="leading" id="1976"/>
+                                    <constraint firstAttribute="centerX" secondItem="1969" secondAttribute="centerX" id="1977"/>
+                                    <constraint firstItem="1969" firstAttribute="top" secondItem="1965" secondAttribute="bottom" id="1978"/>
+                                    <constraint firstItem="1968" firstAttribute="top" secondItem="1969" secondAttribute="bottom" id="1979"/>
+                                    <constraint firstItem="1968" firstAttribute="leading" secondItem="1921" secondAttribute="leading" id="1980"/>
+                                    <constraint firstItem="1981" firstAttribute="centerX" secondItem="1921" secondAttribute="centerX" id="1983"/>
+                                    <constraint firstItem="1981" firstAttribute="top" secondItem="1968" secondAttribute="bottom" id="1984"/>
+                                    <constraint firstItem="1987" firstAttribute="top" secondItem="1981" secondAttribute="bottom" id="1988"/>
+                                    <constraint firstItem="1987" firstAttribute="leading" secondItem="1921" secondAttribute="leading" id="1989"/>
+                                    <constraint firstItem="1992" firstAttribute="centerX" secondItem="1921" secondAttribute="centerX" id="1994"/>
+                                    <constraint firstItem="1992" firstAttribute="top" secondItem="1987" secondAttribute="bottom" id="1995"/>
+                                    <constraint firstItem="1996" firstAttribute="top" secondItem="1992" secondAttribute="bottom" id="1997"/>
+                                    <constraint firstItem="1996" firstAttribute="leading" secondItem="1921" secondAttribute="leading" id="1998"/>
+                                    <constraint firstAttribute="centerX" secondItem="1999" secondAttribute="centerX" id="2001"/>
+                                    <constraint firstItem="1999" firstAttribute="top" secondItem="1996" secondAttribute="bottom" id="2002"/>
+                                    <constraint firstItem="2008" firstAttribute="top" secondItem="1999" secondAttribute="bottom" id="2009"/>
+                                    <constraint firstItem="2008" firstAttribute="leading" secondItem="1921" secondAttribute="leading" id="2010"/>
+                                    <constraint firstAttribute="centerX" secondItem="2011" secondAttribute="centerX" id="2013"/>
+                                    <constraint firstItem="2011" firstAttribute="top" secondItem="2008" secondAttribute="bottom" id="2014"/>
+                                    <constraint firstItem="2040" firstAttribute="top" secondItem="2011" secondAttribute="bottom" id="2045"/>
+                                    <constraint firstItem="2040" firstAttribute="leading" secondItem="1921" secondAttribute="leading" id="2046"/>
+                                    <constraint firstItem="2041" firstAttribute="top" secondItem="2040" secondAttribute="bottom" id="2047"/>
+                                    <constraint firstItem="2041" firstAttribute="centerX" secondItem="1921" secondAttribute="centerX" id="2048"/>
+                                    <constraint firstItem="2049" firstAttribute="top" secondItem="2041" secondAttribute="bottom" id="2052"/>
+                                    <constraint firstItem="2049" firstAttribute="leading" secondItem="1921" secondAttribute="leading" id="2053"/>
+                                    <constraint firstItem="2050" firstAttribute="top" secondItem="2049" secondAttribute="bottom" id="2054"/>
+                                    <constraint firstAttribute="centerX" secondItem="2050" secondAttribute="centerX" id="2055"/>
+                                    <constraint firstItem="2056" firstAttribute="top" secondItem="2050" secondAttribute="bottom" id="2059"/>
+                                    <constraint firstItem="2056" firstAttribute="leading" secondItem="1921" secondAttribute="leading" id="2060"/>
+                                    <constraint firstItem="2057" firstAttribute="top" secondItem="2056" secondAttribute="bottom" id="2061"/>
+                                    <constraint firstItem="2057" firstAttribute="centerX" secondItem="1921" secondAttribute="centerX" id="2062"/>
+                                    <constraint id="2081" firstItem="2080" firstAttribute="top" secondItem="2057" secondAttribute="bottom"/>
+                                    <constraint id="2082" firstItem="2080" firstAttribute="leading" secondItem="1921" secondAttribute="leading"/>
+                                    <constraint id="2085" firstItem="2083" firstAttribute="top" secondItem="2080" secondAttribute="bottom"/>
+                                    <constraint id="2086" firstItem="2083" firstAttribute="centerX" secondItem="1921" secondAttribute="centerX"/>
+                                    <constraint id="2093" firstItem="2091" firstAttribute="top" secondItem="2087" secondAttribute="bottom"/>
+                                    <constraint id="2094" firstItem="2091" firstAttribute="centerX" secondItem="1921" secondAttribute="centerX"/>
+                                    <constraint id="2095" firstItem="2087" firstAttribute="leading" secondItem="1921" secondAttribute="leading"/>
+                                    <constraint id="2097" firstItem="2088" firstAttribute="top" secondItem="2091" secondAttribute="bottom"/>
+                                    <constraint id="2098" firstItem="2088" firstAttribute="leading" secondItem="1921" secondAttribute="leading"/>
+                                    <constraint id="2099" firstItem="2089" firstAttribute="top" secondItem="2088" secondAttribute="bottom"/>
+                                    <constraint id="2100" firstItem="2089" firstAttribute="centerX" secondItem="1921" secondAttribute="centerX"/>
+                                    <constraint id="2103" firstItem="2087" firstAttribute="top" secondItem="2083" secondAttribute="bottom"/>
+                                    <constraint id="2105" firstItem="2104" firstAttribute="top" secondItem="2089" secondAttribute="bottom"/>
+                                    <constraint id="2106" firstItem="2104" firstAttribute="centerX" secondItem="1921" secondAttribute="centerX"/>
+                                </constraints>
+                            </scrollView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1842" misplaced="YES">
+                                <rect key="frame" x="94" y="687" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="1860"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Schedule" image="ScheduleIcon.png" id="1843"/>
+                                    <tabBarItem title="Subscribe" image="SubscribeIcon.png" id="1844"/>
+                                    <tabBarItem title="Feedback" image="FeedbackIcon.png" id="1845"/>
+                                    <tabBarItem title="Questions" image="ContactIcon.png" id="1846"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1842" secondAttribute="trailing" id="1858"/>
+                            <constraint firstAttribute="bottom" secondItem="1842" secondAttribute="bottom" id="1859"/>
+                            <constraint firstItem="1921" firstAttribute="leading" secondItem="1773" secondAttribute="leading" id="1927"/>
+                            <constraint firstItem="1921" firstAttribute="bottom" secondItem="1842" secondAttribute="top" id="1928"/>
+                            <constraint firstItem="1921" firstAttribute="trailing" secondItem="1773" secondAttribute="trailing" id="1929"/>
+                            <constraint firstItem="1921" firstAttribute="top" secondItem="1769" secondAttribute="bottom" id="1930"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ContactTabBarItem" destination="1846" id="name-outlet-1846"/>
+                        <outlet property="FeedbackTabBarItem" destination="1845" id="name-outlet-1845"/>
+                        <outlet property="ScheduleTabBarItem" destination="1843" id="name-outlet-1843"/>
+                        <outlet property="ScrollView" destination="1921" id="name-outlet-1921"/>
+                        <outlet property="SlClassRoom" destination="1950" id="name-outlet-1950"/>
+                        <outlet property="SlConcepts" destination="1969" id="name-outlet-1969"/>
+                        <outlet property="SlContent" destination="1966" id="name-outlet-1966"/>
+                        <outlet property="SlDepth" destination="1992" id="name-outlet-1992"/>
+                        <outlet property="SlInstructorInteraction" destination="1999" id="name-outlet-1999"/>
+                        <outlet property="SlInstructorKnowledge" destination="2011" id="name-outlet-2011"/>
+                        <outlet property="SlInstructorPresentation" destination="2041" id="name-outlet-2041"/>
+                        <outlet property="SlMaterials" destination="1981" id="name-outlet-1981"/>
+                        <outlet property="SlOrganization" destination="2050" id="name-outlet-2050"/>
+                        <outlet property="SlWellPaced" destination="2057" id="name-outlet-2057"/>
+                        <outlet property="SubscribeTabBarItem" destination="1844" id="name-outlet-1844"/>
+                        <outlet property="TabBar" destination="1842" id="name-outlet-1842"/>
+                        <outlet property="SlWellStructured" destination="2083" id="name-outlet-2083"/>
+                        <outlet property="SlGlobal" destination="2089" id="name-outlet-2089"/>
+                        <outlet property="SlGoalAttained" destination="2091" id="name-outlet-2091"/>
+                        <outlet property="SendFeedbackButton" destination="2104" id="name-outlet-2104"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1774" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3343" y="1299"/>
+        </scene>
+        <!--Contact View Controller-->
+        <scene sceneID="1778">
+            <objects>
+                <viewController storyboardIdentifier="ContactViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1779" customClass="ContactViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1776"/>
+                        <viewControllerLayoutGuide type="bottom" id="1777"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1780">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1893">
+                                <rect key="frame" x="0.0" y="53" width="320" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Message:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1897">
+                                <rect key="frame" x="0.0" y="98" width="320" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1906">
+                                <rect key="frame" x="0.0" y="131" width="320" height="245"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1911">
+                                <rect key="frame" x="0.0" y="391" width="320" height="30"/>
+                                <state key="normal" title="Send question">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1861">
+                                <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="1866"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Schedule" image="ScheduleIcon.png" id="1862"/>
+                                    <tabBarItem title="Subscribe" image="SubscribeIcon.png" id="1863"/>
+                                    <tabBarItem title="Feedback" image="FeedbackIcon.png" id="1864"/>
+                                    <tabBarItem title="Questions" image="ContactIcon.png" id="1865"/>
+                                </items>
+                            </tabBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="2251" translatesAutoresizingMaskIntoConstraints="NO" text="Subject:" selectable="NO" editable="NO" scrollEnabled="NO">
+                                <rect key="frame" x="0.0" y="20" width="66" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1861" secondAttribute="trailing" id="1867"/>
+                            <constraint firstAttribute="bottom" secondItem="1861" secondAttribute="bottom" id="1868"/>
+                            <constraint id="2234" firstItem="1861" firstAttribute="top" secondItem="1911" secondAttribute="bottom" constant="10"/>
+                            <constraint id="2235" firstItem="1911" firstAttribute="leading" secondItem="1780" secondAttribute="leading"/>
+                            <constraint id="2236" firstItem="1911" firstAttribute="trailing" secondItem="1780" secondAttribute="trailing"/>
+                            <constraint id="2237" firstItem="1906" firstAttribute="leading" secondItem="1780" secondAttribute="leading"/>
+                            <constraint id="2238" firstItem="1906" firstAttribute="trailing" secondItem="1780" secondAttribute="trailing"/>
+                            <constraint id="2239" firstItem="1911" firstAttribute="top" secondItem="1906" secondAttribute="bottom" constant="15"/>
+                            <constraint id="2240" firstItem="1906" firstAttribute="top" secondItem="1897" secondAttribute="bottom"/>
+                            <constraint id="2241" firstItem="1897" firstAttribute="leading" secondItem="1780" secondAttribute="leading"/>
+                            <constraint id="2242" firstItem="1897" firstAttribute="trailing" secondItem="1780" secondAttribute="trailing"/>
+                            <constraint id="2243" firstItem="1897" firstAttribute="top" secondItem="1893" secondAttribute="bottom" constant="15"/>
+                            <constraint id="2244" firstItem="1893" firstAttribute="leading" secondItem="1780" secondAttribute="leading"/>
+                            <constraint id="2245" firstItem="1893" firstAttribute="trailing" secondItem="1780" secondAttribute="trailing"/>
+                            <constraint id="2252" firstItem="2251" firstAttribute="leading" secondItem="1780" secondAttribute="leading"/>
+                            <constraint id="2253" firstItem="2251" firstAttribute="top" secondItem="1776" secondAttribute="bottom"/>
+                            <constraint id="2254" firstItem="1893" firstAttribute="top" secondItem="2251" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BtSendContactForm" destination="1911" id="name-outlet-1911"/>
+                        <outlet property="ContactTabBarItem" destination="1865" id="name-outlet-1865"/>
+                        <outlet property="FeedbackTabBarItem" destination="1864" id="name-outlet-1864"/>
+                        <outlet property="ScheduleTabBarItem" destination="1862" id="name-outlet-1862"/>
+                        <outlet property="SubscribeTabBarItem" destination="1863" id="name-outlet-1863"/>
+                        <outlet property="TabBar" destination="1861" id="name-outlet-1861"/>
+                        <outlet property="TvMessage" destination="1906" id="name-outlet-1906"/>
+                        <outlet property="TvSubject" destination="1893" id="name-outlet-1893"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1781" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3783" y="991"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ContactIcon.png" width="30" height="30"/>
+        <image name="CoursesIcon.png" width="30" height="30"/>
+        <image name="FeedbackIcon.png" width="30" height="30"/>
+        <image name="ProfileIcon.png" width="30" height="30"/>
+        <image name="ScheduleIcon.png" width="30" height="30"/>
+        <image name="SessionsIcon.png" width="30" height="30"/>
+        <image name="StudentIcon.png" width="30" height="30"/>
+        <image name="SubscribeIcon.png" width="30" height="30"/>
+        <image name="Logo.png" width="281" height="61"/>
+        <image name="InformationIcon.png" width="30" height="30"/>
+        <image name="TeacherIcon.png" width="30" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

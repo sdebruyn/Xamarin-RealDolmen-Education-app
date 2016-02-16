@@ -1,0 +1,1 @@
+Get-ChildItem $PSScriptRoot -Include bin,obj -Recurse | Remove-Item -Recurse

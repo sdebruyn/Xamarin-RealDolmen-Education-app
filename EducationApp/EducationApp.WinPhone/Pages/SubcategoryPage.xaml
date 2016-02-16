@@ -1,0 +1,61 @@
+﻿<common:PageBase x:Class="EducationApp.WinPhone.Pages.SubcategoryPage"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:common="using:EducationApp.WinPhone.Common"
+                 xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:models="using:EducationApp.Models"
+                 Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                 DataContext="{Binding SubcategoryViewModel,
+                                       Source={StaticResource Locator}}"
+                 mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate x:Key="CourseTemplate">
+            <TextBlock Margin="0,0,0,15"
+                       FontSize="22"
+                       Style="{StaticResource BodyTextBlockStyle}"
+                       Text="{Binding Title}"
+                       d:DataContext="{d:DesignInstance models:Course}">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Tapped">
+                        <core:InvokeCommandAction
+                            Command="{Binding SubcategoryViewModel.ShowCourseDetailsCommand, Source={StaticResource Locator}}"
+                            CommandParameter="{Binding}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </TextBlock>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Margin="19,10,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0"
+               Height="40"
+               HorizontalAlignment="Left"
+               Source="ms-appx:///Assets/LogoTrans.png" />
+        <TextBlock Grid.Row="1"
+                   Foreground="{StaticResource RDRedBrush}"
+                   Style="{StaticResource HeaderTextBlockStyle}"
+                   Text="{Binding Category.Name}"
+                   TextWrapping="Wrap" />
+        <ListView Grid.Row="2"
+                  Margin="0,10,0,0"
+                  ItemTemplate="{StaticResource CourseTemplate}"
+                  ItemsSource="{Binding Category.Courses}"
+                  Visibility="{Binding Category.Courses,
+                                       Converter={StaticResource NotEmptyToVisibilityConverter}}" />
+        <TextBlock x:Uid="NoCoursesInCategory"
+                   Grid.Row="2"
+                   Margin="0,10,0,0"
+                   Style="{StaticResource BodyTextBlockStyle}"
+                   Visibility="{Binding Category.Courses,
+                                        Converter={StaticResource EmptyToVisibilityConverter}}" />
+    </Grid>
+</common:PageBase>

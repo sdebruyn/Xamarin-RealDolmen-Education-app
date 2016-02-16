@@ -1,0 +1,53 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--  ReSharper disable InconsistentNaming  -->
+    <Color x:Key="RDRed">#E2001A</Color>
+    <Color x:Key="RDBlue">#0189B4</Color>
+    <Color x:Key="RDDarkRed">#7B1811</Color>
+    <Color x:Key="RDSecondaryBlue">#88AAB1</Color>
+
+    <SolidColorBrush x:Key="RDRedBrush" Color="{StaticResource RDRed}" />
+    <SolidColorBrush x:Key="RDBlueBrush" Color="{StaticResource RDBlue}" />
+    <SolidColorBrush x:Key="RDDarkRedBrush" Color="{StaticResource RDDarkRed}" />
+    <SolidColorBrush x:Key="RDSecondaryBlueBrush" Color="{StaticResource RDSecondaryBlue}" />
+    <!--  ReSharper restore InconsistentNaming  -->
+
+    <Style TargetType="ListViewItem">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="IsHoldingEnabled" Value="False" />
+        <Setter Property="IsDoubleTapEnabled" Value="False" />
+        <Setter Property="IsRightTapEnabled" Value="False" />
+    </Style>
+
+    <Style x:Key="TitleStyle"
+           BasedOn="{StaticResource TitleTextBlockStyle}"
+           TargetType="TextBlock">
+        <Setter Property="Margin" Value="0, 0, 10, 5" />
+    </Style>
+    <Style x:Key="ValueStyle"
+           BasedOn="{StaticResource BodyTextBlockStyle}"
+           TargetType="TextBlock">
+        <Setter Property="Margin" Value="0,0,0,5" />
+        <Setter Property="TextWrapping" Value="WrapWholeWords" />
+    </Style>
+    <Style x:Key="LongValueStyle"
+           BasedOn="{StaticResource ValueStyle}"
+           TargetType="TextBlock">
+        <Setter Property="Margin" Value="0, 0, 0, 10" />
+    </Style>
+
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Default">
+            <SolidColorBrush x:Key="PivotHeaderForegroundSelectedBrush" Color="{StaticResource RDRed}" />
+            <SolidColorBrush x:Key="ButtonForegroundThemeBrush" Color="White" />
+            <SolidColorBrush x:Key="ButtonBackgroundThemeBrush" Color="{StaticResource RDRed}" />
+            <SolidColorBrush x:Key="PivotHeaderForegroundUnselectedBrush" Color="{StaticResource RDBlue}" />
+            <SolidColorBrush x:Key="ProgressBarIndeterminateForegroundThemeBrush" Color="{StaticResource RDBlue}" />
+            <SolidColorBrush x:Key="CommandBarBackgroundThemeBrush" Color="{StaticResource RDRed}" />
+            <SolidColorBrush x:Key="CommandBarForegroundThemeBrush" Color="White" />
+            <SolidColorBrush x:Key="TextSelectionHighlightColorThemeBrush" Color="{StaticResource RDRed}" />
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+
+</ResourceDictionary>

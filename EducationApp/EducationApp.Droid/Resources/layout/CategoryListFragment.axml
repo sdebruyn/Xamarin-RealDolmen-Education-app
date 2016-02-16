@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <com.github.jlmd.animatedcircleloadingview.AnimatedCircleLoadingView
+        android:id="@+id/CategoryListLoadingView"
+        android:layout_width="250dp"
+        android:visibility="gone"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        app:mainColor="@color/RDBlue"
+        app:secondaryColor="@color/RDRed" />
+    <ListView
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/CategoryList" />
+    <ListView
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/SearchResultList" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/NoCoursesFound.Text"
+        android:id="@+id/TvNoCoursesFound" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/Searching"
+        android:id="@+id/TvSearching" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/SearchFaulted.Text"
+        android:id="@+id/TvSearchFaulted" />
+</RelativeLayout>

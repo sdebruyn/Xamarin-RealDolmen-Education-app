@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginRight="5dp"
+        android:id="@+id/TvStartTimeDesc"
+        android:text="@string/StartTime.Text" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/TvStartTimeDesc"
+        android:id="@+id/TvStartTime"
+        tools:text="12/34/56 78:90" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@id/TvStartTimeDesc"
+        android:layout_marginRight="5dp"
+        android:id="@+id/TvEndTimeDesc"
+        android:text="@string/EndTime.Text" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TvStartTimeDesc"
+        android:layout_toRightOf="@id/TvEndTimeDesc"
+        android:id="@+id/TvEndTime"
+        tools:text="12/34/56 78:90" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@id/TvEndTimeDesc"
+        android:layout_marginRight="5dp"
+        android:id="@+id/TvClassRoomDesc"
+        android:text="@string/ClassRoom.Text" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TvEndTimeDesc"
+        android:layout_toRightOf="@id/TvClassRoomDesc"
+        android:id="@+id/TvClassRoom"
+        tools:text="room 123" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@id/TvClassRoomDesc"
+        android:layout_marginRight="5dp"
+        android:id="@+id/TvInstructorDesc"
+        android:text="@string/Instructor.Text" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TvClassRoomDesc"
+        android:layout_toRightOf="@id/TvInstructorDesc"
+        android:id="@+id/TvInstructor"
+        tools:text="Satya Nadella" />
+</RelativeLayout>
