@@ -1,0 +1,60 @@
+﻿<common:PageBase x:Class="EducationApp.WinPhone.Pages.SessionsPage"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:common="using:EducationApp.WinPhone.Common"
+                 xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:models="using:EducationApp.Models"
+                 Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                 DataContext="{Binding CourseViewModel,
+                                       Source={StaticResource Locator}}"
+                 mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate x:Key="SessionTemplate">
+            <TextBlock Margin="0,0,0,15"
+                       FontSize="22"
+                       Style="{StaticResource BodyTextBlockStyle}"
+                       Text="{Binding Description}"
+                       d:DataContext="{d:DesignInstance models:Session}">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Tapped">
+                        <core:InvokeCommandAction
+                            Command="{Binding CourseViewModel.ViewSessionCommand, Source={StaticResource Locator}}"
+                            CommandParameter="{Binding}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </TextBlock>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Margin="19,10,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0"
+               Height="40"
+               HorizontalAlignment="Left"
+               Source="ms-appx:///Assets/LogoTrans.png" />
+        <TextBlock Grid.Row="1"
+                   Foreground="{StaticResource RDRedBrush}"
+                   Style="{StaticResource HeaderTextBlockStyle}"
+                   Text="{Binding Course.Title}" />
+        <ListView Grid.Row="2"
+                  Margin="0,10,0,0"
+                  ItemTemplate="{StaticResource SessionTemplate}"
+                  ItemsSource="{Binding Course.Sessions}"
+                  Visibility="{Binding Course.Sessions,
+                                       Converter={StaticResource NotEmptyToVisibilityConverter}}" />
+        <TextBlock x:Uid="NoSessionsFound"
+                   Grid.Row="2"
+                   Margin="0,10,0,0"
+                   Style="{StaticResource BodyTextBlockStyle}"
+                   Visibility="{Binding Course.Sessions,
+                                        Converter={StaticResource EmptyToVisibilityConverter}}" />
+    </Grid>
+</common:PageBase>

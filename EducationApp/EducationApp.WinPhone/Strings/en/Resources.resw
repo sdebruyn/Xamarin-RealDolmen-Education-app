@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CoursesPivotItem.Header" xml:space="preserve">
+    <value>Courses</value>
+  </data>
+  <data name="NoCoursesFound.Text" xml:space="preserve">
+    <value>There are no courses with a title that contains the search value you entered.</value>
+  </data>
+  <data name="SearchBox.PlaceholderText" xml:space="preserve">
+    <value>Search...</value>
+  </data>
+  <data name="SearchFaulted.Text" xml:space="preserve">
+    <value>An error occured while performing your search. Please check your internet connection and try again later.</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>RealDolmen Education</value>
+  </data>
+  <data name="Login.Label" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="LanguageCode" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="AuthenticationError" xml:space="preserve">
+    <value>There was an error while signing you in. Please verify your internet connection and make sure your credentials and permissions are correct.</value>
+  </data>
+  <data name="ConnectionProblem" xml:space="preserve">
+    <value>There was a problem retrieving data from the web. Please verify if you have a working internet connection.</value>
+  </data>
+  <data name="Email.Text" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="FirstName.Text" xml:space="preserve">
+    <value>First name:</value>
+  </data>
+  <data name="LastName.Text" xml:space="preserve">
+    <value>Last name:</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="Logout.Label" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="NoInternetConnection" xml:space="preserve">
+    <value>No connection</value>
+  </data>
+  <data name="PleaseLogin.Text" xml:space="preserve">
+    <value>Please log in to use this function.</value>
+  </data>
+  <data name="ProfilePivotItem.Header" xml:space="preserve">
+    <value>Your profile</value>
+  </data>
+  <data name="Searching" xml:space="preserve">
+    <value>Searching...</value>
+  </data>
+  <data name="SomethingWrong" xml:space="preserve">
+    <value>Oops...</value>
+  </data>
+  <data name="NoCoursesInCategory.Text" xml:space="preserve">
+    <value>There are no courses in this category.</value>
+  </data>
+  <data name="Audience.Text" xml:space="preserve">
+    <value>Target audience:</value>
+  </data>
+  <data name="CourseContent.Text" xml:space="preserve">
+    <value>Content:</value>
+  </data>
+  <data name="Days.Text" xml:space="preserve">
+    <value> day(s)</value>
+  </data>
+  <data name="DescriptionPivotItem.Header" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Duration.Text" xml:space="preserve">
+    <value>Duration:</value>
+  </data>
+  <data name="InformationPivotItem.Header" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="InstructorEmployer.Text" xml:space="preserve">
+    <value>Company:</value>
+  </data>
+  <data name="InstructorName.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="InstructorPivotItem.Header" xml:space="preserve">
+    <value>Instructor</value>
+  </data>
+  <data name="Materials.Text" xml:space="preserve">
+    <value>Materials:</value>
+  </data>
+  <data name="Methods.Text" xml:space="preserve">
+    <value>Methods:</value>
+  </data>
+  <data name="NoInstructor.Text" xml:space="preserve">
+    <value>The instructor for this course is not (yet) known.</value>
+  </data>
+  <data name="Objectives.Text" xml:space="preserve">
+    <value>Objectives:</value>
+  </data>
+  <data name="OpenBrowserCourse.Content" xml:space="preserve">
+    <value>View more info online</value>
+  </data>
+  <data name="Platforms.Text" xml:space="preserve">
+    <value>Platforms:</value>
+  </data>
+  <data name="Price.Text" xml:space="preserve">
+    <value>Price (€):</value>
+  </data>
+  <data name="Publisher.Text" xml:space="preserve">
+    <value>Publisher:</value>
+  </data>
+  <data name="SendInstructorMail.Content" xml:space="preserve">
+    <value>Mail instructor about this course</value>
+  </data>
+  <data name="StartDate.Text" xml:space="preserve">
+    <value>Start date:</value>
+  </data>
+  <data name="TapSwitchDescription.Text" xml:space="preserve">
+    <value>Tap for more/less info.</value>
+  </data>
+  <data name="ClassRoom.Text" xml:space="preserve">
+    <value>Class room:</value>
+  </data>
+  <data name="EndTime.Text" xml:space="preserve">
+    <value>End time:</value>
+  </data>
+  <data name="Instructor.Text" xml:space="preserve">
+    <value>Instructor:</value>
+  </data>
+  <data name="NoSessionsFound.Text" xml:space="preserve">
+    <value>There are currently no sessions planned for this course.</value>
+  </data>
+  <data name="Preparation.Text" xml:space="preserve">
+    <value>Preparation:</value>
+  </data>
+  <data name="SchedulePivotItem.Header" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="Sessions.Label" xml:space="preserve">
+    <value>Sessions</value>
+  </data>
+  <data name="StartTime.Text" xml:space="preserve">
+    <value>Start time:</value>
+  </data>
+  <data name="AddParticipant.Content" xml:space="preserve">
+    <value>Add participant</value>
+  </data>
+  <data name="City.Text" xml:space="preserve">
+    <value>City:</value>
+  </data>
+  <data name="Company.Text" xml:space="preserve">
+    <value>Company:</value>
+  </data>
+  <data name="Concepts.Text" xml:space="preserve">
+    <value>Concepts and practice:</value>
+  </data>
+  <data name="ContactError" xml:space="preserve">
+    <value>There was an error while sending your data. Please try again later.</value>
+  </data>
+  <data name="ContactPivotItem.Header" xml:space="preserve">
+    <value>Questions</value>
+  </data>
+  <data name="Country.Text" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Fax.Text" xml:space="preserve">
+    <value>Fax:</value>
+  </data>
+  <data name="FeedbackPivotItem.Header" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="FeedbackSent" xml:space="preserve">
+    <value>Your feedback was succesfully sent.</value>
+  </data>
+  <data name="Global.Text" xml:space="preserve">
+    <value>Global:</value>
+  </data>
+  <data name="GoalAttained.Text" xml:space="preserve">
+    <value>Goal attained:</value>
+  </data>
+  <data name="InDepth.Text" xml:space="preserve">
+    <value>In depth:</value>
+  </data>
+  <data name="InstructorInteraction.Text" xml:space="preserve">
+    <value>Instructor interaction:</value>
+  </data>
+  <data name="InstructorKnowledge.Text" xml:space="preserve">
+    <value>Instructor knowledge:</value>
+  </data>
+  <data name="InstructorPresentation.Text" xml:space="preserve">
+    <value>Instructor presentation:</value>
+  </data>
+  <data name="JobTitle.Text" xml:space="preserve">
+    <value>Job title:</value>
+  </data>
+  <data name="Message.Text" xml:space="preserve">
+    <value>Message:</value>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>Your questions were succesfully sent.</value>
+  </data>
+  <data name="Number.Text" xml:space="preserve">
+    <value>Number:</value>
+  </data>
+  <data name="Organization.Text" xml:space="preserve">
+    <value>Organization:</value>
+  </data>
+  <data name="Participants.Text" xml:space="preserve">
+    <value>Participants:</value>
+  </data>
+  <data name="Phone.Text" xml:space="preserve">
+    <value>Phone:</value>
+  </data>
+  <data name="Prerequisites.Text" xml:space="preserve">
+    <value>Prerequisites:</value>
+  </data>
+  <data name="Remarks.Text" xml:space="preserve">
+    <value>Remarks:</value>
+  </data>
+  <data name="RemoveParticipant.Text" xml:space="preserve">
+    <value>Hold your finger on a participant to remove him/her from the list.</value>
+  </data>
+  <data name="SendFeedback.Content" xml:space="preserve">
+    <value>Send feedback</value>
+  </data>
+  <data name="SendMessage.Content" xml:space="preserve">
+    <value>Send message</value>
+  </data>
+  <data name="SendSubscription.Content" xml:space="preserve">
+    <value>Subscribe</value>
+  </data>
+  <data name="Street.Text" xml:space="preserve">
+    <value>Street:</value>
+  </data>
+  <data name="Subject.Text" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="SubscribePivotItem.Header" xml:space="preserve">
+    <value>Subscribe</value>
+  </data>
+  <data name="SubscriptionSent" xml:space="preserve">
+    <value>Your request for a subscription was succesfully sent.</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="WellPaced.Text" xml:space="preserve">
+    <value>Well paced:</value>
+  </data>
+  <data name="WellStructured.Text" xml:space="preserve">
+    <value>Well structured:</value>
+  </data>
+  <data name="ZIP.Text" xml:space="preserve">
+    <value>ZIP:</value>
+  </data>
+  <data name="CompanyInfo" xml:space="preserve">
+    <value>Company info</value>
+  </data>
+  <data name="VAT.Text" xml:space="preserve">
+    <value>VAT:</value>
+  </data>
+  <data name="68.title" xml:space="preserve">
+    <value>MainViewController</value>
+    <comment>Class = "UINavigationController"; title = "MainViewController"; ObjectID = "68";</comment>
+  </data>
+  <data name="139.title" xml:space="preserve">
+    <value>Courses</value>
+    <comment>Class = "UINavigationItem"; title = "Courses"; ObjectID = "139";</comment>
+  </data>
+  <data name="150.title" xml:space="preserve">
+    <value>Courses</value>
+    <comment>Class = "UITabBarItem"; title = "Courses"; ObjectID = "150";</comment>
+  </data>
+  <data name="155.placeholder" xml:space="preserve">
+    <value>Search...</value>
+    <comment>Class = "UISearchBar"; placeholder = "Search..."; ObjectID = "155";</comment>
+  </data>
+  <data name="307.text" xml:space="preserve">
+    <value>An error occured while performing your search. Please check your internet connection and try again later.</value>
+    <comment>Class = "UITextView"; text = "An error occured while performing your search. Please check your internet connection and try again later."; ObjectID = "307";</comment>
+  </data>
+  <data name="318.text" xml:space="preserve">
+    <value>There are no courses with a title that contains the search value you entered.</value>
+    <comment>Class = "UITextView"; text = "There are no courses with a title that contains the search value you entered."; ObjectID = "318";</comment>
+  </data>
+  <data name="323.text" xml:space="preserve">
+    <value>Searching...</value>
+    <comment>Class = "UITextView"; text = "Searching..."; ObjectID = "323";</comment>
+  </data>
+  <data name="333.title" xml:space="preserve">
+    <value>Profile</value>
+    <comment>Class = "UITabBarItem"; title = "Profile"; ObjectID = "333";</comment>
+  </data>
+  <data name="337.title" xml:space="preserve">
+    <value>Your profile</value>
+    <comment>Class = "UIViewController"; title = "Your profile"; ObjectID = "337";</comment>
+  </data>
+  <data name="353.title" xml:space="preserve">
+    <value>Courses</value>
+    <comment>Class = "UITabBarItem"; title = "Courses"; ObjectID = "353";</comment>
+  </data>
+  <data name="354.title" xml:space="preserve">
+    <value>Profile</value>
+    <comment>Class = "UITabBarItem"; title = "Profile"; ObjectID = "354";</comment>
+  </data>
+  <data name="361.text" xml:space="preserve">
+    <value>Please log in to view your profile information.</value>
+    <comment>Class = "UITextView"; text = "Please log in to view your profile information."; ObjectID = "361";</comment>
+  </data>
+  <data name="375.text" xml:space="preserve">
+    <value>First name:</value>
+    <comment>Class = "UITextView"; text = "First name:"; ObjectID = "375";</comment>
+  </data>
+  <data name="379.text" xml:space="preserve">
+    <value>Email:</value>
+    <comment>Class = "UITextView"; text = "Email:"; ObjectID = "379";</comment>
+  </data>
+  <data name="380.text" xml:space="preserve">
+    <value>Last name:</value>
+    <comment>Class = "UITextView"; text = "Last name:"; ObjectID = "380";</comment>
+  </data>
+  <data name="1044.title" xml:space="preserve">
+    <value>Info</value>
+    <comment>Class = "UITabBarItem"; title = "Info"; ObjectID = "1044";</comment>
+  </data>
+  <data name="1141.text" xml:space="preserve">
+    <value>Start date:</value>
+    <comment>Class = "UITextView"; text = "Start date:"; ObjectID = "1141";</comment>
+  </data>
+  <data name="1151.text" xml:space="preserve">
+    <value>Publisher:</value>
+    <comment>Class = "UITextView"; text = "Publisher:"; ObjectID = "1151";</comment>
+  </data>
+  <data name="1163.text" xml:space="preserve">
+    <value>Price (€):</value>
+    <comment>Class = "UITextView"; text = "Price (€):"; ObjectID = "1163";</comment>
+  </data>
+  <data name="1173.text" xml:space="preserve">
+    <value>Duration:</value>
+    <comment>Class = "UITextView"; text = "Duration:"; ObjectID = "1173";</comment>
+  </data>
+  <data name="1175.text" xml:space="preserve">
+    <value>day(s)</value>
+    <comment>Class = "UITextView"; text = "day(s)"; ObjectID = "1175";</comment>
+  </data>
+  <data name="1198.normalTitle" xml:space="preserve">
+    <value>Tap for more/less info.</value>
+    <comment>Class = "UIButton"; normalTitle = "Tap for more/less info."; ObjectID = "1198";</comment>
+  </data>
+  <data name="1230.text" xml:space="preserve">
+    <value>Content:</value>
+    <comment>Class = "UITextView"; text = "Content:"; ObjectID = "1230";</comment>
+  </data>
+  <data name="1238.text" xml:space="preserve">
+    <value>Target audience:</value>
+    <comment>Class = "UITextView"; text = "Target audience:"; ObjectID = "1238";</comment>
+  </data>
+  <data name="1257.text" xml:space="preserve">
+    <value>Objectives:</value>
+    <comment>Class = "UITextView"; text = "Objectives:"; ObjectID = "1257";</comment>
+  </data>
+  <data name="1276.text" xml:space="preserve">
+    <value>Prerequisites:</value>
+    <comment>Class = "UITextView"; text = "Prerequisites:"; ObjectID = "1276";</comment>
+  </data>
+  <data name="1284.text" xml:space="preserve">
+    <value>Methods:</value>
+    <comment>Class = "UITextView"; text = "Methods:"; ObjectID = "1284";</comment>
+  </data>
+  <data name="1303.text" xml:space="preserve">
+    <value>Materials:</value>
+    <comment>Class = "UITextView"; text = "Materials:"; ObjectID = "1303";</comment>
+  </data>
+  <data name="1480.text" xml:space="preserve">
+    <value>Platforms:</value>
+    <comment>Class = "UITextView"; text = "Platforms:"; ObjectID = "1480";</comment>
+  </data>
+  <data name="1495.normalTitle" xml:space="preserve">
+    <value>View more info online</value>
+    <comment>Class = "UIButton"; normalTitle = "View more info online"; ObjectID = "1495";</comment>
+  </data>
+  <data name="1526.text" xml:space="preserve">
+    <value>Instructor:</value>
+    <comment>Class = "UITextView"; text = "Instructor:"; ObjectID = "1526";</comment>
+  </data>
+  <data name="1549.text" xml:space="preserve">
+    <value>Employer:</value>
+    <comment>Class = "UITextView"; text = "Employer:"; ObjectID = "1549";</comment>
+  </data>
+  <data name="1561.text" xml:space="preserve">
+    <value>-</value>
+    <comment>Class = "UITextView"; text = "-"; ObjectID = "1561";</comment>
+  </data>
+  <data name="1565.normalTitle" xml:space="preserve">
+    <value>Mail instructor about this course</value>
+    <comment>Class = "UIButton"; normalTitle = "Mail instructor about this course"; ObjectID = "1565";</comment>
+  </data>
+  <data name="1695.title" xml:space="preserve">
+    <value>Sessions</value>
+    <comment>Class = "UITabBarItem"; title = "Sessions"; ObjectID = "1695";</comment>
+  </data>
+  <data name="1738.title" xml:space="preserve">
+    <value>Schedule</value>
+    <comment>Class = "UITabBarItem"; title = "Schedule"; ObjectID = "1738";</comment>
+  </data>
+  <data name="1743.text" xml:space="preserve">
+    <value>Preparation:</value>
+    <comment>Class = "UITextView"; text = "Preparation:"; ObjectID = "1743";</comment>
+  </data>
+  <data name="1817.title" xml:space="preserve">
+    <value>Subscribe</value>
+    <comment>Class = "UITabBarItem"; title = "Subscribe"; ObjectID = "1817";</comment>
+  </data>
+  <data name="1835.title" xml:space="preserve">
+    <value>Feedback</value>
+    <comment>Class = "UITabBarItem"; title = "Feedback"; ObjectID = "1835";</comment>
+  </data>
+  <data name="1836.title" xml:space="preserve">
+    <value>Questions</value>
+    <comment>Class = "UITabBarItem"; title = "Questions"; ObjectID = "1836";</comment>
+  </data>
+  <data name="1838.title" xml:space="preserve">
+    <value>Schedule</value>
+    <comment>Class = "UITabBarItem"; title = "Schedule"; ObjectID = "1838";</comment>
+  </data>
+  <data name="1839.title" xml:space="preserve">
+    <value>Subscribe</value>
+    <comment>Class = "UITabBarItem"; title = "Subscribe"; ObjectID = "1839";</comment>
+  </data>
+  <data name="1840.title" xml:space="preserve">
+    <value>Feedback</value>
+    <comment>Class = "UITabBarItem"; title = "Feedback"; ObjectID = "1840";</comment>
+  </data>
+  <data name="1841.title" xml:space="preserve">
+    <value>Questions</value>
+    <comment>Class = "UITabBarItem"; title = "Questions"; ObjectID = "1841";</comment>
+  </data>
+  <data name="1843.title" xml:space="preserve">
+    <value>Schedule</value>
+    <comment>Class = "UITabBarItem"; title = "Schedule"; ObjectID = "1843";</comment>
+  </data>
+  <data name="1844.title" xml:space="preserve">
+    <value>Subscribe</value>
+    <comment>Class = "UITabBarItem"; title = "Subscribe"; ObjectID = "1844";</comment>
+  </data>
+  <data name="1845.title" xml:space="preserve">
+    <value>Feedback</value>
+    <comment>Class = "UITabBarItem"; title = "Feedback"; ObjectID = "1845";</comment>
+  </data>
+  <data name="1846.title" xml:space="preserve">
+    <value>Questions</value>
+    <comment>Class = "UITabBarItem"; title = "Questions"; ObjectID = "1846";</comment>
+  </data>
+  <data name="1862.title" xml:space="preserve">
+    <value>Schedule</value>
+    <comment>Class = "UITabBarItem"; title = "Schedule"; ObjectID = "1862";</comment>
+  </data>
+  <data name="1863.title" xml:space="preserve">
+    <value>Subscribe</value>
+    <comment>Class = "UITabBarItem"; title = "Subscribe"; ObjectID = "1863";</comment>
+  </data>
+  <data name="1864.title" xml:space="preserve">
+    <value>Feedback</value>
+    <comment>Class = "UITabBarItem"; title = "Feedback"; ObjectID = "1864";</comment>
+  </data>
+  <data name="1865.title" xml:space="preserve">
+    <value>Questions</value>
+    <comment>Class = "UITabBarItem"; title = "Questions"; ObjectID = "1865";</comment>
+  </data>
+  <data name="1897.text" xml:space="preserve">
+    <value>Message:</value>
+    <comment>Class = "UITextView"; text = "Message:"; ObjectID = "1897";</comment>
+  </data>
+  <data name="1911.normalTitle" xml:space="preserve">
+    <value>Send question</value>
+    <comment>Class = "UIButton"; normalTitle = "Send question"; ObjectID = "1911";</comment>
+  </data>
+  <data name="1916.text" xml:space="preserve">
+    <value>Class room:</value>
+    <comment>Class = "UITextView"; text = "Class room:"; ObjectID = "1916";</comment>
+  </data>
+  <data name="1962.text" xml:space="preserve">
+    <value>Content:</value>
+    <comment>Class = "UITextView"; text = "Content:"; ObjectID = "1962";</comment>
+  </data>
+  <data name="1965.text" xml:space="preserve">
+    <value>Concepts and practice:</value>
+    <comment>Class = "UITextView"; text = "Concepts and practice:"; ObjectID = "1965";</comment>
+  </data>
+  <data name="1968.text" xml:space="preserve">
+    <value>Materials:</value>
+    <comment>Class = "UITextView"; text = "Materials:"; ObjectID = "1968";</comment>
+  </data>
+  <data name="1987.text" xml:space="preserve">
+    <value>In depth:</value>
+    <comment>Class = "UITextView"; text = "In depth:"; ObjectID = "1987";</comment>
+  </data>
+  <data name="1996.text" xml:space="preserve">
+    <value>Instructor interaction:</value>
+    <comment>Class = "UITextView"; text = "Instructor interaction:"; ObjectID = "1996";</comment>
+  </data>
+  <data name="2008.text" xml:space="preserve">
+    <value>Instructor knowledge:</value>
+    <comment>Class = "UITextView"; text = "Instructor knowledge:"; ObjectID = "2008";</comment>
+  </data>
+  <data name="2040.text" xml:space="preserve">
+    <value>Instructor presentation:</value>
+    <comment>Class = "UITextView"; text = "Instructor presentation:"; ObjectID = "2040";</comment>
+  </data>
+  <data name="2049.text" xml:space="preserve">
+    <value>Organization:</value>
+    <comment>Class = "UITextView"; text = "Organization:"; ObjectID = "2049";</comment>
+  </data>
+  <data name="2056.text" xml:space="preserve">
+    <value>Well paced:</value>
+    <comment>Class = "UITextView"; text = "Well paced:"; ObjectID = "2056";</comment>
+  </data>
+  <data name="2080.text" xml:space="preserve">
+    <value>Well structured:</value>
+    <comment>Class = "UITextView"; text = "Well structured:"; ObjectID = "2080";</comment>
+  </data>
+  <data name="2087.text" xml:space="preserve">
+    <value>Goal attained:</value>
+    <comment>Class = "UITextView"; text = "Goal attained:"; ObjectID = "2087";</comment>
+  </data>
+  <data name="2088.text" xml:space="preserve">
+    <value>Global:</value>
+    <comment>Class = "UITextView"; text = "Global:"; ObjectID = "2088";</comment>
+  </data>
+  <data name="2104.normalTitle" xml:space="preserve">
+    <value>Send feedback</value>
+    <comment>Class = "UIButton"; normalTitle = "Send feedback"; ObjectID = "2104";</comment>
+  </data>
+  <data name="2129.text" xml:space="preserve">
+    <value>Please login before using this function.</value>
+    <comment>Class = "UITextView"; text = "Please login before using this function."; ObjectID = "2129";</comment>
+  </data>
+  <data name="2196.normalTitle" xml:space="preserve">
+    <value>Add participant</value>
+    <comment>Class = "UIButton"; normalTitle = "Add participant"; ObjectID = "2196";</comment>
+  </data>
+  <data name="2197.normalTitle" xml:space="preserve">
+    <value>Subscribe</value>
+    <comment>Class = "UIButton"; normalTitle = "Subscribe"; ObjectID = "2197";</comment>
+  </data>
+  <data name="2251.text" xml:space="preserve">
+    <value>Subject:</value>
+    <comment>Class = "UITextView"; text = "Subject:"; ObjectID = "2251";</comment>
+  </data>
+  <data name="en" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="fr" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="nl" xml:space="preserve">
+    <value>Dutch</value>
+  </data>
+  <data name="ChangeLanguage.Label" xml:space="preserve">
+    <value>Content language</value>
+  </data>
+  <data name="FeedbackDescription.Text" xml:space="preserve">
+    <value>If you attended this session, we would appreciate your feedback. To score the session, please drag the sliders so that they match your experience with this session. Drag them to the right for a positive score or to the left for a negative score. Don't forget to tap the button to submit your feedback when you're ready.</value>
+  </data>
+  <data name="Submitting" xml:space="preserve">
+    <value>Sending...</value>
+  </data>
+  <data name="SendUsAMessage.Text" xml:space="preserve">
+    <value>Feel free to send us a message with questions, suggestions, remarks...</value>
+  </data>
+  <data name="SubscribeDescription.Text" xml:space="preserve">
+    <value>If you'd like to attend this session, please fill in all your details and add the attendees as participants. Click subscribe when you're ready.</value>
+  </data>
+</root>

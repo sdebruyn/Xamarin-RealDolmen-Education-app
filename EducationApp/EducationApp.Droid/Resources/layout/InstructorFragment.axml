@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+    <com.github.jlmd.animatedcircleloadingview.AnimatedCircleLoadingView
+        android:id="@+id/CourseInstructorLoadingView"
+        android:layout_width="250dp"
+        android:visibility="gone"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        app:mainColor="@color/RDBlue"
+        app:secondaryColor="@color/RDRed" />
+    <TextView
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp"
+        android:text="@string/InstructorName.Text"
+        android:id="@+id/TvInstructorName" />
+    <TextView
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:paddingRight="4dp"
+        android:layout_toRightOf="@id/TvInstructorName"
+        tools:text="Darth"
+        android:id="@+id/TvInstructorFirstName" />
+    <TextView
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_toRightOf="@id/TvInstructorFirstName"
+        tools:text="Vader"
+        android:id="@+id/TvInstructorLastName" />
+    <TextView
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:paddingBottom="10dp"
+        android:paddingRight="5dp"
+        tools:visibility="visible"
+        android:layout_below="@id/TvInstructorName"
+        android:text="@string/InstructorEmployer.Text"
+        android:id="@+id/TvEmployerDesc" />
+    <TextView
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:text="Sith Corp"
+        android:layout_below="@id/TvInstructorName"
+        android:layout_toRightOf="@id/TvEmployerDesc"
+        android:id="@+id/TvEmployer" />
+    <TextView
+        android:text=" - "
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_toRightOf="@id/TvEmployer"
+        android:layout_below="@id/TvInstructorName"
+        android:id="@+id/TvEmployerSeparator" />
+    <TextView
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_toRightOf="@id/TvEmployerSeparator"
+        android:layout_below="@id/TvInstructorName"
+        android:id="@+id/TvEmployerDepartment"
+        tools:text="MGMT" />
+    <Button
+        android:text="@string/SendInstructorMail.Content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/BtSendInstructorMail" />
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/NoInstructor.Text"
+        android:layout_below="@id/BtSendInstructorMail"
+        android:layout_height="wrap_content"
+        style="@android:style/TextAppearance.Large"
+        android:id="@+id/TvNoInstructor"
+        tools:visibility="gone" />
+</RelativeLayout>

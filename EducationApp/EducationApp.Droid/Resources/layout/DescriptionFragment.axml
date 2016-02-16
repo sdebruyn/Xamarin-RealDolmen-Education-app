@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+        <com.github.jlmd.animatedcircleloadingview.AnimatedCircleLoadingView
+            android:id="@+id/CourseDescriptionLoadingView"
+            android:layout_width="250dp"
+            android:visibility="gone"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            app:mainColor="@color/RDBlue"
+            app:secondaryColor="@color/RDRed" />
+        <TextView
+            android:visibility="gone"
+            android:text="@string/CourseContent.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:visibility="visible"
+            style="@android:style/TextAppearance.Large"
+            android:id="@+id/TvCourseContentDesc" />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            tools:visibility="visible"
+            tools:text="May the Force be with you"
+            android:layout_height="wrap_content"
+            android:id="@+id/TvCourseContent" />
+        <TextView
+            android:visibility="gone"
+            android:text="@string/Audience.Text"
+            android:layout_width="match_parent"
+            tools:visibility="visible"
+            style="@android:style/TextAppearance.Large"
+            android:layout_height="wrap_content"
+            android:id="@+id/TvAudienceDesc" />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            tools:visibility="visible"
+            tools:text="May the Force be with you"
+            android:layout_height="wrap_content"
+            android:id="@+id/TvAudience" />
+        <TextView
+            android:visibility="gone"
+            android:text="@string/Objectives.Text"
+            android:layout_width="match_parent"
+            style="@android:style/TextAppearance.Large"
+            tools:visibility="visible"
+            android:layout_height="wrap_content"
+            android:id="@+id/TvObjectivesDesc" />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"
+            tools:text="May the Force be with you"
+            tools:visibility="visible"
+            android:id="@+id/TvObjectives" />
+        <TextView
+            android:visibility="gone"
+            android:text="@string/Prerequisites.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:visibility="visible"
+            style="@android:style/TextAppearance.Large"
+            android:id="@+id/TvPrerequisitesDesc" />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"
+            tools:visibility="visible"
+            tools:text="May the Force be with you"
+            android:id="@+id/TvPrerequisites" />
+        <TextView
+            android:visibility="gone"
+            android:text="@string/Methods.Text"
+            android:layout_width="match_parent"
+            tools:visibility="visible"
+            android:layout_height="wrap_content"
+            style="@android:style/TextAppearance.Large"
+            android:id="@+id/TvMethodsDesc" />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"
+            tools:text="May the Force be with you"
+            tools:visibility="visible"
+            android:id="@+id/TvMethods" />
+        <TextView
+            android:visibility="gone"
+            android:text="@string/Materials.Text"
+            android:layout_width="match_parent"
+            tools:visibility="visible"
+            android:layout_height="wrap_content"
+            style="@android:style/TextAppearance.Large"
+            android:id="@+id/TvMaterialsDesc" />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            tools:visibility="visible"
+            android:layout_height="wrap_content"
+            tools:text="May the Force be with you"
+            android:id="@+id/TvMaterials" />
+        <TextView
+            android:visibility="gone"
+            android:text="@string/Platforms.Text"
+            tools:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/TextAppearance.Large"
+            android:id="@+id/TvPlatformsDesc" />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            tools:visibility="visible"
+            tools:text="May the Force be with you"
+            android:id="@+id/TvPlatforms" />
+        <Button
+            android:id="@+id/BtOpenBrowser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:visibility="visible"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/OpenBrowserCourse.Content" />
+    </LinearLayout>
+</ScrollView>

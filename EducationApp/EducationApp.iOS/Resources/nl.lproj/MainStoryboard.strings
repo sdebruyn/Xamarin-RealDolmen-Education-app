@@ -1,0 +1,215 @@
+/*Class = "UINavigationController"; title = "MainViewController"; ObjectID = "68";*/
+"68.title" = "MainViewController";
+
+/*Class = "UINavigationItem"; title = "Courses"; ObjectID = "139";*/
+"139.title" = "Opleidingen";
+
+/*Class = "UITabBarItem"; title = "Courses"; ObjectID = "150";*/
+"150.title" = "Opleidingen";
+
+/*Class = "UISearchBar"; placeholder = "Search..."; ObjectID = "155";*/
+"155.placeholder" = "Zoeken...";
+
+/*Class = "UITextView"; text = "An error occured while performing your search. Please check your internet connection and try again later."; ObjectID = "307";*/
+"307.text" = "Er is een fout opgetreden tijdens het uitvoeren van uw zoekopdracht. Controleer uw internetverbinding en probeer het later opnieuw.";
+
+/*Class = "UITextView"; text = "There are no courses with a title that contains the search value you entered."; ObjectID = "318";*/
+"318.text" = "Er zijn geen opleidingen gevonden.";
+
+/*Class = "UITextView"; text = "Searching..."; ObjectID = "323";*/
+"323.text" = "Zoeken...";
+
+/*Class = "UITabBarItem"; title = "Profile"; ObjectID = "333";*/
+"333.title" = "Profiel";
+
+/*Class = "UIViewController"; title = "Your profile"; ObjectID = "337";*/
+"337.title" = "Jouw profiel";
+
+/*Class = "UITabBarItem"; title = "Courses"; ObjectID = "353";*/
+"353.title" = "Opleidingen";
+
+/*Class = "UITabBarItem"; title = "Profile"; ObjectID = "354";*/
+"354.title" = "Profiel";
+
+/*Class = "UITextView"; text = "Please log in to view your profile information."; ObjectID = "361";*/
+"361.text" = "Log in om uw profielinformatie te bekijken.";
+
+/*Class = "UITextView"; text = "First name:"; ObjectID = "375";*/
+"375.text" = "Voornaam:";
+
+/*Class = "UITextView"; text = "Email:"; ObjectID = "379";*/
+"379.text" = "E-mail:";
+
+/*Class = "UITextView"; text = "Last name:"; ObjectID = "380";*/
+"380.text" = "Achternaam:";
+
+/*Class = "UITabBarItem"; title = "Info"; ObjectID = "1044";*/
+"1044.title" = "Info";
+
+/*Class = "UITextView"; text = "Start date:"; ObjectID = "1141";*/
+"1141.text" = "Begindatum:";
+
+/*Class = "UITextView"; text = "Publisher:"; ObjectID = "1151";*/
+"1151.text" = "Uitgever:";
+
+/*Class = "UITextView"; text = "Price (€):"; ObjectID = "1163";*/
+"1163.text" = "Prijs (€):";
+
+/*Class = "UITextView"; text = "Duration:"; ObjectID = "1173";*/
+"1173.text" = "Duur:";
+
+/*Class = "UITextView"; text = "day(s)"; ObjectID = "1175";*/
+"1175.text" = "dag(en)";
+
+/*Class = "UIButton"; normalTitle = "Tap for more/less info."; ObjectID = "1198";*/
+"1198.normalTitle" = "Tik voor meer/minder info.";
+
+/*Class = "UITextView"; text = "Content:"; ObjectID = "1230";*/
+"1230.text" = "Inhoud:";
+
+/*Class = "UITextView"; text = "Target audience:"; ObjectID = "1238";*/
+"1238.text" = "Doelgroep:";
+
+/*Class = "UITextView"; text = "Objectives:"; ObjectID = "1257";*/
+"1257.text" = "Doelen:";
+
+/*Class = "UITextView"; text = "Prerequisites:"; ObjectID = "1276";*/
+"1276.text" = "Vereisten:";
+
+/*Class = "UITextView"; text = "Methods:"; ObjectID = "1284";*/
+"1284.text" = "Methoden:";
+
+/*Class = "UITextView"; text = "Materials:"; ObjectID = "1303";*/
+"1303.text" = "Cursusmateriaal:";
+
+/*Class = "UITextView"; text = "Platforms:"; ObjectID = "1480";*/
+"1480.text" = "Platformen:";
+
+/*Class = "UIButton"; normalTitle = "View more info online"; ObjectID = "1495";*/
+"1495.normalTitle" = "Bekijk meer info online";
+
+/*Class = "UITextView"; text = "Instructor:"; ObjectID = "1526";*/
+"1526.text" = "Lesgever:";
+
+/*Class = "UITextView"; text = "Employer:"; ObjectID = "1549";*/
+"1549.text" = "Bedrijf:";
+
+/*Class = "UITextView"; text = "-"; ObjectID = "1561";*/
+"1561.text" = "-";
+
+/*Class = "UIButton"; normalTitle = "Mail instructor about this course"; ObjectID = "1565";*/
+"1565.normalTitle" = "Mail lesgever over deze cursus";
+
+/*Class = "UITabBarItem"; title = "Sessions"; ObjectID = "1695";*/
+"1695.title" = "Sessies";
+
+/*Class = "UITabBarItem"; title = "Schedule"; ObjectID = "1738";*/
+"1738.title" = "Lessenrooster";
+
+/*Class = "UITextView"; text = "Preparation:"; ObjectID = "1743";*/
+"1743.text" = "Voorbereiding:";
+
+/*Class = "UITabBarItem"; title = "Subscribe"; ObjectID = "1817";*/
+"1817.title" = "Inschrijven";
+
+/*Class = "UITabBarItem"; title = "Feedback"; ObjectID = "1835";*/
+"1835.title" = "Evaluatie";
+
+/*Class = "UITabBarItem"; title = "Questions"; ObjectID = "1836";*/
+"1836.title" = "Vragen";
+
+/*Class = "UITabBarItem"; title = "Schedule"; ObjectID = "1838";*/
+"1838.title" = "Lessenrooster";
+
+/*Class = "UITabBarItem"; title = "Subscribe"; ObjectID = "1839";*/
+"1839.title" = "Inschrijven";
+
+/*Class = "UITabBarItem"; title = "Feedback"; ObjectID = "1840";*/
+"1840.title" = "Evaluatie";
+
+/*Class = "UITabBarItem"; title = "Questions"; ObjectID = "1841";*/
+"1841.title" = "Vragen";
+
+/*Class = "UITabBarItem"; title = "Schedule"; ObjectID = "1843";*/
+"1843.title" = "Lessenrooster";
+
+/*Class = "UITabBarItem"; title = "Subscribe"; ObjectID = "1844";*/
+"1844.title" = "Inschrijven";
+
+/*Class = "UITabBarItem"; title = "Feedback"; ObjectID = "1845";*/
+"1845.title" = "Evaluatie";
+
+/*Class = "UITabBarItem"; title = "Questions"; ObjectID = "1846";*/
+"1846.title" = "Vragen";
+
+/*Class = "UITabBarItem"; title = "Schedule"; ObjectID = "1862";*/
+"1862.title" = "Lessenrooster";
+
+/*Class = "UITabBarItem"; title = "Subscribe"; ObjectID = "1863";*/
+"1863.title" = "Inschrijven";
+
+/*Class = "UITabBarItem"; title = "Feedback"; ObjectID = "1864";*/
+"1864.title" = "Evaluatie";
+
+/*Class = "UITabBarItem"; title = "Questions"; ObjectID = "1865";*/
+"1865.title" = "Vragen";
+
+/*Class = "UITextView"; text = "Message:"; ObjectID = "1897";*/
+"1897.text" = "Bericht:";
+
+/*Class = "UIButton"; normalTitle = "Send question"; ObjectID = "1911";*/
+"1911.normalTitle" = "Bericht verzenden";
+
+/*Class = "UITextView"; text = "Class room:"; ObjectID = "1916";*/
+"1916.text" = "Lokaal:";
+
+/*Class = "UITextView"; text = "Content:"; ObjectID = "1962";*/
+"1962.text" = "Inhoud:";
+
+/*Class = "UITextView"; text = "Concepts and practice:"; ObjectID = "1965";*/
+"1965.text" = "Concepten en praktijk:";
+
+/*Class = "UITextView"; text = "Materials:"; ObjectID = "1968";*/
+"1968.text" = "Lesmateriaal:";
+
+/*Class = "UITextView"; text = "In depth:"; ObjectID = "1987";*/
+"1987.text" = "Diepgaand:";
+
+/*Class = "UITextView"; text = "Instructor interaction:"; ObjectID = "1996";*/
+"1996.text" = "Interactie met lesgever:";
+
+/*Class = "UITextView"; text = "Instructor knowledge:"; ObjectID = "2008";*/
+"2008.text" = "Kennis lesgever:";
+
+/*Class = "UITextView"; text = "Instructor presentation:"; ObjectID = "2040";*/
+"2040.text" = "Presentatie lesgever:";
+
+/*Class = "UITextView"; text = "Organization:"; ObjectID = "2049";*/
+"2049.text" = "Organisatie:";
+
+/*Class = "UITextView"; text = "Well paced:"; ObjectID = "2056";*/
+"2056.text" = "Tempo:";
+
+/*Class = "UITextView"; text = "Well structured:"; ObjectID = "2080";*/
+"2080.text" = "Goed gestructureerd:";
+
+/*Class = "UITextView"; text = "Goal attained:"; ObjectID = "2087";*/
+"2087.text" = "Doel bereikt:";
+
+/*Class = "UITextView"; text = "Global:"; ObjectID = "2088";*/
+"2088.text" = "Globaal:";
+
+/*Class = "UIButton"; normalTitle = "Send feedback"; ObjectID = "2104";*/
+"2104.normalTitle" = "Evaluatie verzenden";
+
+/*Class = "UITextView"; text = "Please login before using this function."; ObjectID = "2129";*/
+"2129.text" = "Gelieve in te loggen voordat u deze functie gebruikt.";
+
+/*Class = "UIButton"; normalTitle = "Add participant"; ObjectID = "2196";*/
+"2196.normalTitle" = "Deelnemer toevoegen";
+
+/*Class = "UIButton"; normalTitle = "Subscribe"; ObjectID = "2197";*/
+"2197.normalTitle" = "Inschrijven";
+
+/*Class = "UITextView"; text = "Subject:"; ObjectID = "2251";*/
+"2251.text" = "Onderwerp:";

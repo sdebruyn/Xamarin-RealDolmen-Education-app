@@ -1,0 +1,307 @@
+"CoursesPivotItem_Header" = "Cours";
+"NoCoursesFound_Text" = "Il n'y a pas de cours avec un titre qui contient la valeur de recherche que vous avez entré.";
+"SearchBox_PlaceholderText" = "Chercher...";
+"SearchFaulted_Text" = "Une erreur est survenue lors de l'exécution de votre recherche. S'il vous plaît vérifier votre connexion Internet et réessayer plus tard.";
+"ApplicationName" = "RealDolmen Education";
+"Login_Label" = "Se connecter";
+"LanguageCode" = "fr";
+"AuthenticationError" = "Il y avait une erreur pendant que vous connectez. S'il vous plaît vérifier votre connexion Internet et assurez-vous que vos informations d'identification et les autorisations sont correctes.";
+"ConnectionProblem" = "Il y avait un problème. S'il vous plaît vérifier si vous disposez d'une connexion Internet.";
+"Email_Text" = "Email:";
+"FirstName_Text" = "Prénom:";
+"LastName_Text" = "Nom:";
+"Loading" = "Chargement...";
+"Logout_Label" = "Se déconnecter";
+"NoInternetConnection" = "Pas de connexion Internet";
+"PleaseLogin_Text" = "S'il vous plaît vous connecter pour utiliser cette fonction.";
+"ProfilePivotItem_Header" = "Votre profil";
+"Searching" = "Cherchant...";
+"SomethingWrong" = "Oops...";
+"NoCoursesInCategory_Text" = "Il n'y a pas de cours dans cette catégorie.";
+"Audience_Text" = "Public:";
+"CourseContent_Text" = "Contenu:";
+"Days_Text" = " jour(s)";
+"DescriptionPivotItem_Header" = "Déscription";
+"Duration_Text" = "Durée:";
+"InformationPivotItem_Header" = "Info";
+"InstructorEmployer_Text" = "Entreprise:";
+"InstructorName_Text" = "Nom:";
+"InstructorPivotItem_Header" = "Instructeur";
+"Materials_Text" = "Matériaux:";
+"Methods_Text" = "Méthodes:";
+"NoInstructor_Text" = "L'instructeur pour ce cours n'est pas (encore) connu.";
+"Objectives_Text" = "Objectifs:";
+"OpenBrowserCourse_Content" = "Voir les renseignements sur les cours";
+"Platforms_Text" = "Plates-formes:";
+"Price_Text" = "Prix ​​(€):";
+"Publisher_Text" = "Éditeur:";
+"SendInstructorMail_Content" = "Contacter l'instructeur";
+"StartDate_Text" = "Date de début:";
+"TapSwitchDescription_Text" = "Appuyez ici pour plus/moins d'infos.";
+"ClassRoom_Text" = "Salle de classe:";
+"EndTime_Text" = "Heure de fin:";
+"Instructor_Text" = "Instructeur:";
+"NoSessionsFound_Text" = "Il n'y a pas de sessions prévues pour ce cours.";
+"Preparation_Text" = "Préparation:";
+"SchedulePivotItem_Header" = "Programme";
+"Sessions_Label" = "Sessions";
+"StartTime_Text" = "Heure de début:";
+"AddParticipant_Content" = "Ajouter un participant";
+"City_Text" = "Ville:";
+"Company_Text" = "Entreprise:";
+"Concepts_Text" = "Concepts et pratiques:";
+"ContactError" = "Il y avait une erreur lors de l'envoi de vos données. Veuillez réessayer plus tard.";
+"ContactPivotItem_Header" = "Les questions";
+"Country_Text" = "Pays";
+"Fax_Text" = "Fax:";
+"FeedbackPivotItem_Header" = "Evaluation";
+"FeedbackSent" = "Votre évaluation est envoyée.";
+"Global_Text" = "Global:";
+"GoalAttained_Text" = "Objectif atteint:";
+"InDepth_Text" = "En profondeur:";
+"InstructorInteraction_Text" = "Interaction avec l'instructeur:";
+"InstructorKnowledge_Text" = "Connaissance de l'instructeur:";
+"InstructorPresentation_Text" = "Présentation de l'instructeur:";
+"JobTitle_Text" = "Fonction:";
+"Message_Text" = "Message:";
+"MessageSent" = "Vos questions sont envoyées.";
+"Number_Text" = "Nombre:";
+"Organization_Text" = "Organisation:";
+"Participants_Text" = "Participants:";
+"Phone_Text" = "Téléphone:";
+"Prerequisites_Text" = "Prérequis:";
+"Remarks_Text" = "Remarques:";
+"RemoveParticipant_Text" = "Maintenez votre doigt sur un participant pour lui / elle retirer de la liste.";
+"SendFeedback_Content" = "Envoyer l'évaluation";
+"SendMessage_Content" = "Envoyer le message";
+"SendSubscription_Content" = "S'enregistrer";
+"Street_Text" = "Rue:";
+"Subject_Text" = "Sujet:";
+"SubscribePivotItem_Header" = "S'enregistrer";
+"SubscriptionSent" = "Votre demande est envoyée avec succès.";
+"Success" = "Succès";
+"WellPaced_Text" = "Bien au rythme:";
+"WellStructured_Text" = "Bien structuré:";
+"ZIP_Text" = "Code postal:";
+"CompanyInfo" = "Information d'entreprise";
+"VAT_Text" = "T.V.A:";
+
+/*Class = "UINavigationController"; title = "MainViewController"; ObjectID = "68";*/
+"68_title" = "MainViewController";
+
+/*Class = "UINavigationItem"; title = "Courses"; ObjectID = "139";*/
+"139_title" = "Cours";
+
+/*Class = "UITabBarItem"; title = "Courses"; ObjectID = "150";*/
+"150_title" = "Cours";
+
+/*Class = "UISearchBar"; placeholder = "Search..."; ObjectID = "155";*/
+"155_placeholder" = "Chercher...";
+
+/*Class = "UITextView"; text = "An error occured while performing your search. Please check your internet connection and try again later."; ObjectID = "307";*/
+"307_text" = "Une erreur est survenue lors de l'exécution de votre recherche. S'il vous plaît vérifier votre connexion Internet et réessayer plus tard.";
+
+/*Class = "UITextView"; text = "There are no courses with a title that contains the search value you entered."; ObjectID = "318";*/
+"318_text" = "Il n'y a pas de cours avec un titre qui contient la valeur de recherche que vous avez entré.";
+
+/*Class = "UITextView"; text = "Searching..."; ObjectID = "323";*/
+"323_text" = "Cherchant...";
+
+/*Class = "UITabBarItem"; title = "Profile"; ObjectID = "333";*/
+"333_title" = "Profil";
+
+/*Class = "UIViewController"; title = "Your profile"; ObjectID = "337";*/
+"337_title" = "Votre profil";
+
+/*Class = "UITabBarItem"; title = "Courses"; ObjectID = "353";*/
+"353_title" = "Cours";
+
+/*Class = "UITabBarItem"; title = "Profile"; ObjectID = "354";*/
+"354_title" = "Profil";
+
+/*Class = "UITextView"; text = "Please log in to view your profile information."; ObjectID = "361";*/
+"361_text" = "S'il vous plaît de vous connecter pour visualiser vos informations de profil.";
+
+/*Class = "UITextView"; text = "First name:"; ObjectID = "375";*/
+"375_text" = "Prénom:";
+
+/*Class = "UITextView"; text = "Email:"; ObjectID = "379";*/
+"379_text" = "Email:";
+
+/*Class = "UITextView"; text = "Last name:"; ObjectID = "380";*/
+"380_text" = "Nom de famille:";
+
+/*Class = "UITabBarItem"; title = "Info"; ObjectID = "1044";*/
+"1044_title" = "Info";
+
+/*Class = "UITextView"; text = "Start date:"; ObjectID = "1141";*/
+"1141_text" = "Date de début:";
+
+/*Class = "UITextView"; text = "Publisher:"; ObjectID = "1151";*/
+"1151_text" = "Éditeur:";
+
+/*Class = "UITextView"; text = "Price (€):"; ObjectID = "1163";*/
+"1163_text" = "Prix ​​(€):";
+
+/*Class = "UITextView"; text = "Duration:"; ObjectID = "1173";*/
+"1173_text" = "Durée:";
+
+/*Class = "UITextView"; text = "day(s)"; ObjectID = "1175";*/
+"1175_text" = "jour(s)";
+
+/*Class = "UIButton"; normalTitle = "Tap for more/less info."; ObjectID = "1198";*/
+"1198_normalTitle" = "Appuyez ici pour plus/moins d'infos.";
+
+/*Class = "UITextView"; text = "Content:"; ObjectID = "1230";*/
+"1230_text" = "Contenu:";
+
+/*Class = "UITextView"; text = "Target audience:"; ObjectID = "1238";*/
+"1238_text" = "Public:";
+
+/*Class = "UITextView"; text = "Objectives:"; ObjectID = "1257";*/
+"1257_text" = "Objectifs:";
+
+/*Class = "UITextView"; text = "Prerequisites:"; ObjectID = "1276";*/
+"1276_text" = "Prérequis:";
+
+/*Class = "UITextView"; text = "Methods:"; ObjectID = "1284";*/
+"1284_text" = "Méthodes:";
+
+/*Class = "UITextView"; text = "Materials:"; ObjectID = "1303";*/
+"1303_text" = "Matériaux:";
+
+/*Class = "UITextView"; text = "Platforms:"; ObjectID = "1480";*/
+"1480_text" = "Plates-formes:";
+
+/*Class = "UIButton"; normalTitle = "View more info online"; ObjectID = "1495";*/
+"1495_normalTitle" = "Voir plus d'infos en ligne";
+
+/*Class = "UITextView"; text = "Instructor:"; ObjectID = "1526";*/
+"1526_text" = "Instructeur:";
+
+/*Class = "UITextView"; text = "Employer:"; ObjectID = "1549";*/
+"1549_text" = "Entreprise:";
+
+/*Class = "UITextView"; text = "-"; ObjectID = "1561";*/
+"1561_text" = "-";
+
+/*Class = "UIButton"; normalTitle = "Mail instructor about this course"; ObjectID = "1565";*/
+"1565_normalTitle" = "Contacter l'instructeur";
+
+/*Class = "UITabBarItem"; title = "Sessions"; ObjectID = "1695";*/
+"1695_title" = "Sessions";
+
+/*Class = "UITabBarItem"; title = "Schedule"; ObjectID = "1738";*/
+"1738_title" = "Programme";
+
+/*Class = "UITextView"; text = "Preparation:"; ObjectID = "1743";*/
+"1743_text" = "Préparation:";
+
+/*Class = "UITabBarItem"; title = "Subscribe"; ObjectID = "1817";*/
+"1817_title" = "S'enregistrer";
+
+/*Class = "UITabBarItem"; title = "Feedback"; ObjectID = "1835";*/
+"1835_title" = "Evaluation";
+
+/*Class = "UITabBarItem"; title = "Questions"; ObjectID = "1836";*/
+"1836_title" = "Questions";
+
+/*Class = "UITabBarItem"; title = "Schedule"; ObjectID = "1838";*/
+"1838_title" = "Programme";
+
+/*Class = "UITabBarItem"; title = "Subscribe"; ObjectID = "1839";*/
+"1839_title" = "S'enregistrer";
+
+/*Class = "UITabBarItem"; title = "Feedback"; ObjectID = "1840";*/
+"1840_title" = "Evaluation";
+
+/*Class = "UITabBarItem"; title = "Questions"; ObjectID = "1841";*/
+"1841_title" = "Questions";
+
+/*Class = "UITabBarItem"; title = "Schedule"; ObjectID = "1843";*/
+"1843_title" = "Programme";
+
+/*Class = "UITabBarItem"; title = "Subscribe"; ObjectID = "1844";*/
+"1844_title" = "S'enregistrer";
+
+/*Class = "UITabBarItem"; title = "Feedback"; ObjectID = "1845";*/
+"1845_title" = "Evaluation";
+
+/*Class = "UITabBarItem"; title = "Questions"; ObjectID = "1846";*/
+"1846_title" = "Questions";
+
+/*Class = "UITabBarItem"; title = "Schedule"; ObjectID = "1862";*/
+"1862_title" = "Programme";
+
+/*Class = "UITabBarItem"; title = "Subscribe"; ObjectID = "1863";*/
+"1863_title" = "S'enregistrer";
+
+/*Class = "UITabBarItem"; title = "Feedback"; ObjectID = "1864";*/
+"1864_title" = "Evaluation";
+
+/*Class = "UITabBarItem"; title = "Questions"; ObjectID = "1865";*/
+"1865_title" = "Questions";
+
+/*Class = "UITextView"; text = "Message:"; ObjectID = "1897";*/
+"1897_text" = "Message:";
+
+/*Class = "UIButton"; normalTitle = "Send question"; ObjectID = "1911";*/
+"1911_normalTitle" = "Envoyer le message";
+
+/*Class = "UITextView"; text = "Class room:"; ObjectID = "1916";*/
+"1916_text" = "Salle de classe:";
+
+/*Class = "UITextView"; text = "Content:"; ObjectID = "1962";*/
+"1962_text" = "Contenu:";
+
+/*Class = "UITextView"; text = "Concepts and practice:"; ObjectID = "1965";*/
+"1965_text" = "Concepts et pratiques:";
+
+/*Class = "UITextView"; text = "Materials:"; ObjectID = "1968";*/
+"1968_text" = "Matériaux:";
+
+/*Class = "UITextView"; text = "In depth:"; ObjectID = "1987";*/
+"1987_text" = "En profondeur:";
+
+/*Class = "UITextView"; text = "Instructor interaction:"; ObjectID = "1996";*/
+"1996_text" = "Interaction avec l'instructeur:";
+
+/*Class = "UITextView"; text = "Instructor knowledge:"; ObjectID = "2008";*/
+"2008_text" = "Connaissance de l'instructeur:";
+
+/*Class = "UITextView"; text = "Instructor presentation:"; ObjectID = "2040";*/
+"2040_text" = "Présentation de l'instructeur:";
+
+/*Class = "UITextView"; text = "Organization:"; ObjectID = "2049";*/
+"2049_text" = "Organisation:";
+
+/*Class = "UITextView"; text = "Well paced:"; ObjectID = "2056";*/
+"2056_text" = "Bien au rythme:";
+
+/*Class = "UITextView"; text = "Well structured:"; ObjectID = "2080";*/
+"2080_text" = "Bien structuré:";
+
+/*Class = "UITextView"; text = "Goal attained:"; ObjectID = "2087";*/
+"2087_text" = "Objectif atteint:";
+
+/*Class = "UITextView"; text = "Global:"; ObjectID = "2088";*/
+"2088_text" = "Global:";
+
+/*Class = "UIButton"; normalTitle = "Send feedback"; ObjectID = "2104";*/
+"2104_normalTitle" = "Envoyer l'évaluation";
+
+/*Class = "UITextView"; text = "Please login before using this function."; ObjectID = "2129";*/
+"2129_text" = "S'il vous plaîtd de vous connecter avant d'utiliser cette fonction.";
+
+/*Class = "UIButton"; normalTitle = "Add participant"; ObjectID = "2196";*/
+"2196_normalTitle" = "Ajouter un participant";
+
+/*Class = "UIButton"; normalTitle = "Subscribe"; ObjectID = "2197";*/
+"2197_normalTitle" = "S'enregistrer";
+
+/*Class = "UITextView"; text = "Subject:"; ObjectID = "2251";*/
+"2251_text" = "Sujet:";
+"en" = "anglais";
+"fr" = "français";
+"nl" = "néerlandais";
+"ChangeLanguage_Label" = "Langue du contenu";

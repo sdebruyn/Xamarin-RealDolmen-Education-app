@@ -1,0 +1,288 @@
+﻿<common:PageBase x:Class="EducationApp.WinPhone.Pages.CoursePage"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:common="using:EducationApp.WinPhone.Common"
+                 xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                 DataContext="{Binding CourseViewModel,
+                                       Source={StaticResource Locator}}"
+                 mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Uid="Sessions"
+                          Command="{Binding ViewSessionsCommand}"
+                          Icon="List" />
+            <AppBarButton x:Uid="ChangeLanguage" Icon="Character">
+                <AppBarButton.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Command="{Binding CourseViewModel.ChangeLanguageCommand,
+                                                          Source={StaticResource Locator}}"
+                                        CommandParameter="{Binding}"
+                                        DataContext="{Binding CourseViewModel.Languages[0],
+                                                              Source={StaticResource Locator}}"
+                                        Text="{Binding Converter={StaticResource LanguageConverter}}" />
+                        <MenuFlyoutItem Command="{Binding CourseViewModel.ChangeLanguageCommand,
+                                                          Source={StaticResource Locator}}"
+                                        CommandParameter="{Binding}"
+                                        DataContext="{Binding CourseViewModel.Languages[1],
+                                                              Source={StaticResource Locator}}"
+                                        Text="{Binding Converter={StaticResource LanguageConverter}}" />
+                        <MenuFlyoutItem Command="{Binding CourseViewModel.ChangeLanguageCommand,
+                                                          Source={StaticResource Locator}}"
+                                        CommandParameter="{Binding}"
+                                        DataContext="{Binding CourseViewModel.Languages[2],
+                                                              Source={StaticResource Locator}}"
+                                        Text="{Binding Converter={StaticResource LanguageConverter}}" />
+                    </MenuFlyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Margin="0, 10, 0, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0"
+               Height="40"
+               Margin="19,0,0,-10"
+               HorizontalAlignment="Left"
+               Source="ms-appx:///Assets/LogoTrans.png" />
+        <TextBlock Grid.Row="1"
+                   Margin="19,10,0,-15"
+                   FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"
+                   Foreground="{StaticResource RDBlueBrush}"
+                   Style="{StaticResource HeaderTextBlockStyle}"
+                   Text="{Binding Course.Title}"
+                   TextWrapping="Wrap" />
+        <Pivot Grid.Row="2">
+            <PivotItem x:Uid="InformationPivotItem" Header="Information">
+                <ScrollViewer>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   Style="{StaticResource ValueStyle}">
+                            <Run Text="{Binding ActiveDescription}" />
+                            <Run x:Uid="TapSwitchDescription" Text="Tap for more/less info." />
+                            <interactivity:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="Tapped">
+                                    <core:InvokeCommandAction Command="{Binding SwitchDescriptionCommand}" />
+                                </core:EventTriggerBehavior>
+                            </interactivity:Interaction.Behaviors>
+                        </TextBlock>
+                        <TextBlock x:Uid="StartDate"
+                                   Grid.Row="1"
+                                   Grid.Column="0"
+                                   Style="{StaticResource TitleStyle}"
+                                   Text="Start date:"
+                                   Visibility="{Binding Course.StartDate,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock Grid.Row="1"
+                                   Grid.Column="1"
+                                   Style="{StaticResource ValueStyle}"
+                                   Text="{Binding Course.StartDate,
+                                                  Converter={StaticResource StringFormatConverter},
+                                                  ConverterParameter='{}{0:d}'}"
+                                   Visibility="{Binding Course.StartDate,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock x:Uid="Publisher"
+                                   Grid.Row="2"
+                                   Grid.Column="0"
+                                   Style="{StaticResource TitleStyle}"
+                                   Text="Publisher:"
+                                   Visibility="{Binding Course.Publisher,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock Grid.Row="2"
+                                   Grid.Column="1"
+                                   Style="{StaticResource ValueStyle}"
+                                   Text="{Binding Course.Publisher}"
+                                   Visibility="{Binding Course.Publisher,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock x:Uid="Price"
+                                   Grid.Row="3"
+                                   Grid.Column="0"
+                                   Style="{StaticResource TitleStyle}"
+                                   Text="Price (€):"
+                                   Visibility="{Binding Course.Price,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock Grid.Row="3"
+                                   Grid.Column="1"
+                                   Style="{StaticResource ValueStyle}"
+                                   Text="{Binding Course.Price,
+                                                  Converter={StaticResource StringFormatConverter},
+                                                  ConverterParameter='{}{0:F}'}"
+                                   Visibility="{Binding Course.Price,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock x:Uid="Duration"
+                                   Grid.Row="4"
+                                   Grid.Column="0"
+                                   Style="{StaticResource TitleStyle}"
+                                   Text="Duration:"
+                                   Visibility="{Binding Course.Duration,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock Grid.Row="4"
+                                   Grid.Column="1"
+                                   Style="{StaticResource ValueStyle}"
+                                   Visibility="{Binding Course.Duration,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}">
+                            <Run Text="{Binding Course.Duration}" />
+                            <Run x:Uid="Days" Text="day(s)" />
+                        </TextBlock>
+                    </Grid>
+                </ScrollViewer>
+            </PivotItem>
+            <PivotItem x:Uid="DescriptionPivotItem" Header="Description">
+                <ScrollViewer>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock x:Uid="CourseContent"
+                                   Style="{StaticResource TitleStyle}"
+                                   Text="Content:"
+                                   Visibility="{Binding Course.Description.CourseContent,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock Style="{StaticResource LongValueStyle}"
+                                   Text="{Binding Course.Description.CourseContent}"
+                                   Visibility="{Binding Course.Description.CourseContent,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock x:Uid="Audience"
+                                   Style="{StaticResource TitleStyle}"
+                                   Text="Target audience:"
+                                   Visibility="{Binding Course.Description.Audience,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock Style="{StaticResource LongValueStyle}"
+                                   Text="{Binding Course.Description.Audience}"
+                                   Visibility="{Binding Course.Description.Audience,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock x:Uid="Objectives"
+                                   Style="{StaticResource TitleStyle}"
+                                   Text="Objectives:"
+                                   Visibility="{Binding Course.Description.Objectives,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock Style="{StaticResource LongValueStyle}"
+                                   Text="{Binding Course.Description.Objectives}"
+                                   Visibility="{Binding Course.Description.Objectives,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock x:Uid="Prerequisites"
+                                   Style="{StaticResource TitleStyle}"
+                                   Text="Prerequisites:"
+                                   Visibility="{Binding Course.Description.Prerequisites,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock Style="{StaticResource LongValueStyle}"
+                                   Text="{Binding Course.Description.Prerequisites}"
+                                   Visibility="{Binding Course.Description.Prerequisites,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock x:Uid="Methods"
+                                   Style="{StaticResource TitleStyle}"
+                                   Text="Methods:"
+                                   Visibility="{Binding Course.Description.Methods,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock Style="{StaticResource LongValueStyle}"
+                                   Text="{Binding Course.Description.Methods}"
+                                   Visibility="{Binding Course.Description.Methods,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock x:Uid="Materials"
+                                   Style="{StaticResource TitleStyle}"
+                                   Text="Materials:"
+                                   Visibility="{Binding Course.Description.Materials,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock Style="{StaticResource LongValueStyle}"
+                                   Text="{Binding Course.Description.Materials}"
+                                   Visibility="{Binding Course.Description.Materials,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock x:Uid="Platforms"
+                                   Style="{StaticResource TitleStyle}"
+                                   Text="Platforms:"
+                                   Visibility="{Binding Course.Description.Platforms,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <TextBlock Style="{StaticResource LongValueStyle}"
+                                   Text="{Binding Course.Description.Platforms}"
+                                   Visibility="{Binding Course.Description.Platforms,
+                                                        Converter={StaticResource NotNullToVisibilityConverter}}" />
+                        <Button x:Uid="OpenBrowserCourse"
+                                HorizontalAlignment="Stretch"
+                                Command="{Binding OpenBrowserCommand}"
+                                Content="View more info online" />
+                    </StackPanel>
+                </ScrollViewer>
+            </PivotItem>
+            <PivotItem x:Uid="InstructorPivotItem" Header="Instructor">
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock x:Uid="NoInstructor"
+                                   Style="{StaticResource BodyTextBlockStyle}"
+                                   Text="Instructor not known."
+                                   Visibility="{Binding Course.Instructor,
+                                                        Converter={StaticResource NullToVisibilityConverter}}" />
+                        <Grid Visibility="{Binding Course.Instructor, Converter={StaticResource NotNullToVisibilityConverter}}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock x:Uid="InstructorName"
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       Style="{StaticResource TitleStyle}"
+                                       Text="Name:"
+                                       Visibility="{Binding Course.Instructor.LastName,
+                                                            Converter={StaticResource NotNullToVisibilityConverter}}" />
+                            <TextBlock Grid.Row="0"
+                                       Grid.Column="1"
+                                       Style="{StaticResource ValueStyle}"
+                                       Visibility="{Binding Course.Instructor.LastName,
+                                                            Converter={StaticResource NotNullToVisibilityConverter}}">
+                                <Run Text="{Binding Course.Instructor.FirstName}" />
+                                <Run Text="{Binding Course.Instructor.LastName}" />
+                            </TextBlock>
+                            <TextBlock x:Uid="InstructorEmployer"
+                                       Grid.Row="1"
+                                       Grid.Column="0"
+                                       Style="{StaticResource TitleStyle}"
+                                       Text="Company:"
+                                       Visibility="{Binding Course.Instructor.Employer,
+                                                            Converter={StaticResource NotNullToVisibilityConverter}}" />
+                            <TextBlock Grid.Row="1"
+                                       Grid.Column="1"
+                                       Style="{StaticResource ValueStyle}"
+                                       Visibility="{Binding Course.Instructor.Employer,
+                                                            Converter={StaticResource NotNullToVisibilityConverter}}">
+                                <Run Text="{Binding Course.Instructor.Employer}" />
+                                <Run Text="(" />
+                                <Run Text="{Binding Course.Instructor.EmployerDepartment}" />
+                                <Run Text=")" />
+                            </TextBlock>
+                            <Button x:Uid="SendInstructorMail"
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                    HorizontalAlignment="Stretch"
+                                    Command="{Binding SendInstructorEmailCommand}"
+                                    Content="Mail the instructor about this course" />
+                        </Grid>
+                    </Grid>
+                </ScrollViewer>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</common:PageBase>

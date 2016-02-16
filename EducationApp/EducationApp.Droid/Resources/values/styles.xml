@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <style name="RDTheme" parent="RDTheme.Base">
+    <item name="colorPrimary">@color/RDRed</item>
+    <item name="colorAccent">@color/RDBlue</item>
+  </style>
+
+  <style name="RDTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="colorPrimary">@color/RDRed</item>
+    <item name="colorPrimaryDark">@color/RDDarkRed</item>
+    <item name="colorAccent">@color/RDBlue</item>
+  </style>
+
+  <style name="RDTheme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@drawable/splash</item>
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="android:windowFullscreen">true</item>
+  </style>
+</resources>

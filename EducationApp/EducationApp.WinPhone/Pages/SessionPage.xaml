@@ -1,0 +1,683 @@
+﻿<common:PageBase x:Class="EducationApp.WinPhone.Pages.SessionPage"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:common="using:EducationApp.WinPhone.Common"
+                 xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:models="using:EducationApp.Models"
+                 Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                 DataContext="{Binding SessionViewModel,
+                                       Source={StaticResource Locator}}"
+                 mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <DataTemplate x:Key="ParticipantTemplate">
+            <TextBlock Foreground="{StaticResource RDSecondaryBlueBrush}"
+                       Style="{StaticResource BodyTextBlockStyle}"
+                       d:DataContext="{d:DesignInstance models:Participant}">
+                <Run Text="{Binding FirstName}" />
+                <Run Text="{Binding LastName}" />
+                <Run Text="-" />
+                <Run Text="{Binding Email}" />
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="RightTapped">
+                        <core:InvokeCommandAction Command="{Binding SessionViewModel.RemoveParticipantCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </TextBlock>
+        </DataTemplate>
+
+        <DataTemplate x:Key="SessionScheduleTemplate">
+            <Grid Margin="0,10,0,10" d:DataContext="{d:DesignInstance models:SessionSchedule}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Uid="StartTime"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           Style="{StaticResource TitleStyle}"
+                           Text="Start time:" />
+                <TextBlock Grid.Row="0"
+                           Grid.Column="1"
+                           Style="{StaticResource ValueStyle}"
+                           Text="{Binding StartTime,
+                                          Converter={StaticResource StringFormatConverter},
+                                          ConverterParameter='{}{0:U}'}" />
+                <TextBlock x:Uid="EndTime"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           Style="{StaticResource TitleStyle}"
+                           Text="End time:" />
+                <TextBlock Grid.Row="1"
+                           Grid.Column="1"
+                           Style="{StaticResource ValueStyle}"
+                           Text="{Binding EndTime,
+                                          Converter={StaticResource StringFormatConverter},
+                                          ConverterParameter='{}{0:U}'}" />
+                <TextBlock x:Uid="ClassRoom"
+                           Grid.Row="2"
+                           Grid.Column="0"
+                           Style="{StaticResource TitleStyle}"
+                           Text="Class room:" />
+                <TextBlock Grid.Row="2"
+                           Grid.Column="1"
+                           Style="{StaticResource ValueStyle}"
+                           Text="{Binding ClassRoom.Name}" />
+                <TextBlock x:Uid="Instructor"
+                           Grid.Row="3"
+                           Grid.Column="0"
+                           Style="{StaticResource TitleStyle}"
+                           Text="Instructor:" />
+                <TextBlock Grid.Row="3"
+                           Grid.Column="1"
+                           Style="{StaticResource ValueStyle}">
+                    <Run Text="{Binding Instructor.FirstName}" />
+                    <Run Text="{Binding Instructor.LastName}" />
+                </TextBlock>
+            </Grid>
+        </DataTemplate>
+
+    </Page.Resources>
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Uid="Login"
+                          Command="{Binding LoginCommand}"
+                          Visibility="{Binding Identity,
+                                               Converter={StaticResource NullToVisibilityConverter},
+                                               UpdateSourceTrigger=PropertyChanged}">
+                <AppBarButton.Icon>
+                    <FontIcon Glyph="&#x1F513;" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton x:Uid="Logout"
+                          Command="{Binding LogoutCommand}"
+                          Visibility="{Binding Identity,
+                                               Converter={StaticResource NotNullToVisibilityConverter},
+                                               UpdateSourceTrigger=PropertyChanged}">
+                <AppBarButton.Icon>
+                    <FontIcon Glyph="&#x1F512;" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0"
+               Height="40"
+               Margin="19,10,0,0"
+               HorizontalAlignment="Left"
+               Source="ms-appx:///Assets/LogoTrans.png" />
+        <Pivot Title="{Binding CourseViewModel.Course.Title,
+                               Source={StaticResource Locator}}"
+               Grid.Row="1"
+               Margin="0,-10,0,0">
+
+            <Pivot.TitleTemplate>
+                <DataTemplate>
+                    <TextBlock FontSize="44"
+                               Foreground="{StaticResource RDDarkRedBrush}"
+                               Style="{StaticResource HeaderTextBlockStyle}"
+                               Text="{Binding}"
+                               TextWrapping="Wrap" />
+                </DataTemplate>
+            </Pivot.TitleTemplate>
+            <Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock FontSize="36" Text="{Binding}" />
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
+
+            <PivotItem x:Uid="SchedulePivotItem" Header="Schedule">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="2"
+                               Margin="0,-30,0,0"
+                               FontSize="28"
+                               Foreground="{StaticResource RDSecondaryBlueBrush}"
+                               Style="{StaticResource SubheaderTextBlockStyle}"
+                               Text="{Binding Session.Location}" />
+                    <TextBlock x:Uid="Preparation"
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               Margin="0,0,5,30"
+                               Style="{StaticResource TitleStyle}"
+                               Text="Preparation:" />
+                    <TextBlock Grid.Row="1"
+                               Grid.Column="1"
+                               Margin="0,0,0,30"
+                               Style="{StaticResource ValueStyle}"
+                               Text="{Binding Session.Preparation}" />
+                    <ListView Grid.Row="2"
+                              Grid.Column="0"
+                              Grid.ColumnSpan="2"
+                              ItemTemplate="{StaticResource SessionScheduleTemplate}"
+                              ItemsSource="{Binding Session.SessionSchedules}" />
+                </Grid>
+            </PivotItem>
+            <PivotItem x:Uid="SubscribePivotItem" Header="Subscribe">
+                <Grid>
+                    <ScrollViewer Visibility="{Binding Identity, Converter={StaticResource NotNullToVisibilityConverter}}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Uid="SubscribeDescription"
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Margin="0,0,0,20"
+                                       Style="{StaticResource BodyTextBlockStyle}"
+                                       Text="If you're interested in this session, you can subscribe."
+                                       TextWrapping="WrapWholeWords" />
+                            <TextBlock x:Uid="FirstName"
+                                       Grid.Row="1"
+                                       Grid.Column="0"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="First name:" />
+                            <TextBlock x:Uid="LastName"
+                                       Grid.Row="1"
+                                       Grid.Column="1"
+                                       Margin="5, 0, 0, 0"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Last name:" />
+                            <TextBox Grid.Row="2"
+                                     Grid.Column="0"
+                                     Margin="0, 0, 5, 10"
+                                     AcceptsReturn="False"
+                                     Text="{Binding Subscription.FirstName,
+                                                    Mode=TwoWay}" />
+                            <TextBox Grid.Row="2"
+                                     Grid.Column="1"
+                                     Margin="5, 0, 0, 10"
+                                     AcceptsReturn="False"
+                                     Text="{Binding Subscription.LastName,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="JobTitle"
+                                       Grid.Row="3"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Job title:" />
+                            <TextBox Grid.Row="4"
+                                     Grid.Column="0"
+                                     Grid.ColumnSpan="2"
+                                     AcceptsReturn="False"
+                                     Text="{Binding Subscription.JobTitle,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="Company"
+                                       Grid.Row="5"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Company:" />
+                            <TextBox Grid.Row="6"
+                                     Grid.Column="0"
+                                     Grid.ColumnSpan="2"
+                                     AcceptsReturn="False"
+                                     Text="{Binding Subscription.Company,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="Street"
+                                       Grid.Row="7"
+                                       Grid.Column="0"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Street:" />
+                            <TextBlock x:Uid="Number"
+                                       Grid.Row="7"
+                                       Grid.Column="1"
+                                       Margin="5, 0, 0, 0"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Number:" />
+                            <TextBox Grid.Row="8"
+                                     Grid.Column="0"
+                                     Margin="0, 0, 5, 10"
+                                     AcceptsReturn="False"
+                                     Text="{Binding Subscription.Street,
+                                                    Mode=TwoWay}" />
+                            <TextBox Grid.Row="8"
+                                     Grid.Column="1"
+                                     Margin="5, 0, 0, 10"
+                                     AcceptsReturn="False"
+                                     Text="{Binding Subscription.Number,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="City"
+                                       Grid.Row="9"
+                                       Grid.Column="0"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="City:" />
+                            <TextBlock x:Uid="ZIP"
+                                       Grid.Row="9"
+                                       Grid.Column="1"
+                                       Margin="5, 0, 0, 0"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="ZIP:" />
+                            <TextBox Grid.Row="10"
+                                     Grid.Column="0"
+                                     Margin="0, 0, 5, 10"
+                                     AcceptsReturn="False"
+                                     Text="{Binding Subscription.City,
+                                                    Mode=TwoWay}" />
+                            <TextBox Grid.Row="10"
+                                     Grid.Column="1"
+                                     Margin="5, 0, 0, 10"
+                                     AcceptsReturn="False"
+                                     Text="{Binding Subscription.ZIPCode,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="Country"
+                                       Grid.Row="11"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Country:" />
+                            <TextBox Grid.Row="12"
+                                     Grid.Column="0"
+                                     Grid.ColumnSpan="2"
+                                     AcceptsReturn="False"
+                                     Text="{Binding Subscription.Country,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="Email"
+                                       Grid.Row="13"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Email:" />
+                            <TextBox Grid.Row="14"
+                                     Grid.Column="0"
+                                     Grid.ColumnSpan="2"
+                                     AcceptsReturn="False"
+                                     InputScope="EmailSmtpAddress"
+                                     Text="{Binding Subscription.Email,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="Phone"
+                                       Grid.Row="15"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Phone:" />
+                            <TextBox Grid.Row="15"
+                                     Grid.Column="0"
+                                     Grid.ColumnSpan="2"
+                                     AcceptsReturn="False"
+                                     InputScope="TelephoneNumber"
+                                     Text="{Binding Subscription.Phone,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="Fax"
+                                       Grid.Row="17"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Fax:" />
+                            <TextBox Grid.Row="18"
+                                     Grid.Column="0"
+                                     Grid.ColumnSpan="2"
+                                     AcceptsReturn="False"
+                                     InputScope="TelephoneNumber"
+                                     Text="{Binding Subscription.Fax,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="VAT"
+                                       Grid.Row="19"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="VAT:" />
+                            <TextBox Grid.Row="20"
+                                     Grid.Column="0"
+                                     Grid.ColumnSpan="2"
+                                     AcceptsReturn="False"
+                                     Text="{Binding Subscription.VAT,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="Remarks"
+                                       Grid.Row="21"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Remarks:" />
+                            <TextBox Grid.Row="22"
+                                     Grid.Column="0"
+                                     Grid.ColumnSpan="2"
+                                     AcceptsReturn="False"
+                                     Text="{Binding Subscription.Remarks,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="Participants"
+                                       Grid.Row="23"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Style="{StaticResource SubheaderTextBlockStyle}"
+                                       Text="Participants:" />
+                            <TextBlock x:Uid="RemoveParticipant"
+                                       Grid.Row="24"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Style="{StaticResource BodyTextBlockStyle}"
+                                       Text="Hold to remove." />
+                            <ListView Grid.Row="25"
+                                      Grid.Column="0"
+                                      Grid.ColumnSpan="2"
+                                      Margin="0,10,0,10"
+                                      ItemTemplate="{StaticResource ParticipantTemplate}"
+                                      ItemsSource="{Binding Subscription.Participants}" />
+                            <Border Grid.Row="26"
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                    Margin="5"
+                                    BorderBrush="{StaticResource RDBlueBrush}"
+                                    BorderThickness="2,2,2,2">
+                                <Grid Margin="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Uid="FirstName"
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                               Style="{StaticResource TitleTextBlockStyle}"
+                                               Text="First name:" />
+                                    <TextBlock x:Uid="LastName"
+                                               Grid.Row="0"
+                                               Grid.Column="1"
+                                               Margin="5,0,0,0"
+                                               Style="{StaticResource TitleTextBlockStyle}"
+                                               Text="Last name:" />
+                                    <TextBox Grid.Row="1"
+                                             Grid.Column="0"
+                                             Margin="0,0,5,5"
+                                             AcceptsReturn="False"
+                                             Text="{Binding ParticipantToAdd.FirstName,
+                                                            Mode=TwoWay}" />
+                                    <TextBox Grid.Row="1"
+                                             Grid.Column="1"
+                                             Margin="5,0,0,5"
+                                             AcceptsReturn="False"
+                                             Text="{Binding ParticipantToAdd.LastName,
+                                                            Mode=TwoWay}" />
+                                    <TextBlock x:Uid="Email"
+                                               Grid.Row="2"
+                                               Grid.Column="0"
+                                               Grid.ColumnSpan="2"
+                                               Style="{StaticResource TitleTextBlockStyle}"
+                                               Text="Email:" />
+                                    <TextBox Grid.Row="3"
+                                             Grid.Column="0"
+                                             Grid.ColumnSpan="2"
+                                             Margin="0,0,0,5"
+                                             AcceptsReturn="False"
+                                             InputScope="EmailSmtpAddress"
+                                             Text="{Binding ParticipantToAdd.Email,
+                                                            Mode=TwoWay}" />
+                                    <Button x:Uid="AddParticipant"
+                                            Grid.Row="4"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="2"
+                                            HorizontalAlignment="Stretch"
+                                            Command="{Binding AddParticipantCommand}"
+                                            Content="Add participant" />
+                                </Grid>
+                            </Border>
+                            <Button x:Uid="SendSubscription"
+                                    Grid.Row="27"
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                    HorizontalAlignment="Stretch"
+                                    Command="{Binding SendSubscriptionCommand}"
+                                    Content="Subscribe" />
+                        </Grid>
+                    </ScrollViewer>
+                    <TextBlock x:Uid="PleaseLogin"
+                               Style="{StaticResource SubheaderTextBlockStyle}"
+                               Text="Please log in to use this function."
+                               Visibility="{Binding Identity,
+                                                    Converter={StaticResource NullToVisibilityConverter}}" />
+                </Grid>
+            </PivotItem>
+            <PivotItem x:Uid="FeedbackPivotItem" Header="Feedback">
+                <Grid>
+                    <TextBlock x:Uid="PleaseLogin"
+                               Style="{StaticResource SubheaderTextBlockStyle}"
+                               Text="Please log in to use this function."
+                               Visibility="{Binding Identity,
+                                                    Converter={StaticResource NullToVisibilityConverter}}" />
+                    <ScrollViewer HorizontalScrollMode="Disabled"
+                                  VerticalScrollMode="Enabled"
+                                  Visibility="{Binding Identity,
+                                                       Converter={StaticResource NotNullToVisibilityConverter}}">
+                        <StackPanel VerticalAlignment="Stretch" Orientation="Vertical">
+                            <TextBlock x:Uid="FeedbackDescription"
+                                       Margin="0,0,0,30"
+                                       Style="{StaticResource BodyTextBlockStyle}"
+                                       Text="Please rate according to your experience." />
+                            <TextBlock x:Uid="ClassRoom"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Class room:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.Classroom,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="CourseContent"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Content:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.Content,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="Concepts"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Concepts and practice:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.ConceptsAndPractice,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="Materials"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Materials:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.CourseMaterials,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="InDepth"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="In depth:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.InDepth,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="InstructorInteraction"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Instructor interaction:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.InstructorInteraction,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="InstructorKnowledge"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Instructor knowledge:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.InstructorKnowledge,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="InstructorPresentation"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Instructor presentation:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.InstructorPresentation,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="Organization"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Organization:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.Organization,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="WellPaced"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Well paced:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.WellPaced,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="WellStructured"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Well structured:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.WellStructured,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="GoalAttained"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Goal attained:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.GoalAttained,
+                                                    Mode=TwoWay}" />
+                            <TextBlock x:Uid="Global"
+                                       Style="{StaticResource TitleTextBlockStyle}"
+                                       Text="Global:" />
+                            <Slider HorizontalAlignment="Stretch"
+                                    LargeChange="2"
+                                    Maximum="10"
+                                    TickFrequency="1"
+                                    Value="{Binding ScoredFeedback.Global,
+                                                    Mode=TwoWay}" />
+                            <Button x:Uid="SendFeedback"
+                                    HorizontalAlignment="Stretch"
+                                    Command="{Binding SendFeedbackCommand}"
+                                    Content="Send feedback" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </PivotItem>
+            <PivotItem x:Uid="ContactPivotItem" Header="Questions">
+                <Grid>
+                    <Grid Visibility="{Binding Identity, Converter={StaticResource NotNullToVisibilityConverter}}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock x:Uid="SendUsAMessage"
+                                   Grid.Row="0"
+                                   Style="{StaticResource BodyTextBlockStyle}"
+                                   Text="Feel free to send us a message!" />
+                        <TextBlock x:Uid="Subject"
+                                   Grid.Row="1"
+                                   Style="{StaticResource TitleTextBlockStyle}"
+                                   Text="Subject:" />
+                        <TextBox Grid.Row="2"
+                                 AcceptsReturn="False"
+                                 Text="{Binding ContactForm.Subject,
+                                                Mode=TwoWay}" />
+                        <TextBlock x:Uid="Message"
+                                   Grid.Row="3"
+                                   Style="{StaticResource TitleTextBlockStyle}"
+                                   Text="Message:" />
+                        <TextBox Grid.Row="4"
+                                 VerticalAlignment="Stretch"
+                                 AcceptsReturn="True"
+                                 Text="{Binding ContactForm.Body,
+                                                Mode=TwoWay}" />
+                        <Button x:Uid="SendMessage"
+                                Grid.Row="5"
+                                HorizontalAlignment="Stretch"
+                                Command="{Binding SendContactFormCommand}"
+                                Content="Send message" />
+                    </Grid>
+                    <TextBlock x:Uid="PleaseLogin"
+                               Style="{StaticResource SubheaderTextBlockStyle}"
+                               Text="Please log in to use this function."
+                               Visibility="{Binding Identity,
+                                                    Converter={StaticResource NullToVisibilityConverter}}" />
+                </Grid>
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</common:PageBase>

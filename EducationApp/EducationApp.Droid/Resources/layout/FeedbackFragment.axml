@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="70dp">
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PleaseLogin.Text"
+            android:id="@+id/TvPleaseLogin"
+            android:visibility="gone" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/FeedbackForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ClassRoom.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlClassRoom" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/CourseContent.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlContent" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Concepts.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlConcepts" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Materials.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlMaterials" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/InDepth.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlInDepth" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/InstructorInteraction.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlInstructorInteraction" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/InstructorKnowledge.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlInstructorKnowledge" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/InstructorPresentation.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlInstructorPresentation" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Organization.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlOrganization" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/WellPaced.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlWellPaced" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/WellStructured.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlWellStructured" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/GoalAttained.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlGoalAttained" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Global.Text"
+                style="@android:style/TextAppearance.Medium" />
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:max="10"
+                android:id="@+id/SlGlobal" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SendFeedback.Content"
+                android:id="@+id/SendFeedbackButton" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
