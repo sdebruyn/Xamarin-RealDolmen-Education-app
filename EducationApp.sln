@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationApp", "EducationAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationApp.UnitTests", "EducationApp.UnitTests\EducationApp.UnitTests.csproj", "{5E64581E-DC55-4001-86DB-2E85792D88A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationApp.Metrics", "EducationApp.Metrics\EducationApp.Metrics.csproj", "{7A4CFF5F-5467-446F-8352-903CFFBC9B38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		AppStore|Any CPU = AppStore|Any CPU
@@ -259,6 +261,48 @@ Global
 		{5E64581E-DC55-4001-86DB-2E85792D88A7}.Release|WP SIM.Build.0 = Release|Any CPU
 		{5E64581E-DC55-4001-86DB-2E85792D88A7}.Release|x86.ActiveCfg = Release|Any CPU
 		{5E64581E-DC55-4001-86DB-2E85792D88A7}.Release|x86.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|ARM.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|iPhoneSimulator.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|WP device.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|WP device.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|WP SIM.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|WP SIM.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.AppStore|x86.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|ARM.Build.0 = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|WP device.ActiveCfg = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|WP device.Build.0 = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|WP SIM.ActiveCfg = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|WP SIM.Build.0 = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Debug|x86.Build.0 = Debug|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|ARM.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|ARM.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|iPhone.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|WP device.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|WP device.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|WP SIM.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|WP SIM.Build.0 = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|x86.ActiveCfg = Release|Any CPU
+		{7A4CFF5F-5467-446F-8352-903CFFBC9B38}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
